@@ -1,0 +1,34 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    spacing: 0px;
+    padding: 0;
+    border: none;
+    background-color: #1a1a1a;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#document {
+margin: 0;
+padding: 0;
+border: none;
+}
+
+#navbar {
+    width: 100%;
+    height: 72.5px;
+}
+
+#super-fruit-game {
+    overflow: visible;
+}
