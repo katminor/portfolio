@@ -43,6 +43,7 @@ border: none;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     background-color: #1A1A1A;
+    backface-visibility: hidden;
     color: white;
     margin: 0;
     display: flex;
