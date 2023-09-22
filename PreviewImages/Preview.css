@@ -1,0 +1,52 @@
+body {
+    margin: 0px;
+    background-color: #1A1A1A;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+iframe {
+    padding: 0;
+    border: none;
+    width: 250%;
+    height: 250%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#MLB {
+    margin-top: -700px;
+    margin-left: -50px;
+}
+
+#Whats-Cooking {
+    margin-top: -820px;
+    margin-left: -100px;
+}
+
+#Grapevine {
+    margin-top: -550px;
+    margin-left: -100px;
+}
+
+#Drift {
+    margin-top: -525px;
+    margin-left: 0px;
+}
+
+.preview {
+    height: 560px;
+    width: 900px;
+    overflow: hidden;
+}
+
+.preview-text {
+    position: absolute; 
+    z-index: 1;
+}
+
+.preview-text img {
+    margin-left: 5px;
+    width: 900px;
+    height: 560px;
+}

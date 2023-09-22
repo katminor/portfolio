@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    cursor: pointer;
+    padding-left: 50px;
+}
+
+.row {
+    transform: rotate(-22.5deg);
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.screen { 
+    background-color:gray;
+	height:471.57px;
+}
+
+.alignment-margin {
+    margin-top: 215px;
+}
+
+.feed-card {
+    height:200.72px;
+    width:402.41px;
+}
+
+.feed-card.bottom {
+    height: 286.34px;
+    width: 402.41px;
+}

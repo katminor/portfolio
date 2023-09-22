@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transform: rotate(-22.5deg);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.screen { 
+    background-color:gray;
+	width:540px;
+	height:303px;
+}
+
+.icon { 
+	width:124px;
+	height:124px;
+    margin-top: -24px;
+}
+
+.right-aligned {
+    justify-content: flex-end;
+}
+
+.alignment-margin {
+    margin-top: 514px;
+    
+}
+
+.horizontal-aligned {
+    align-items: center;
+}

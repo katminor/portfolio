@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Bounce Fruit Collection Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="superFruitGame.css">
+    <script src="superFruitGame.js"></script>
+</head>
+
+<body>
+    <div id="game">
+        <!-- Timer Bar -->
+        <div id="timer-bar" class="game-start-dependant"></div>
+
+        <!-- Interaction Area-->
+        <div id="throw-area" class="game-start-dependant"></div>
+        <a onmousedown="event.preventDefault()">
+            <div id="ball"></div>
+        </a>
+
+        <!-- All Fruit -->
+        <div id="fruit-container">
+        </div>
+
+        <!-- Wow for fruit collection -->
+        <div id="wow-text" class="no-drag game-start-dependant"></div>
+
+        <!-- Begginning text  -->
+        <span class="intro-text" id="with-ball"><strong>Drag me to start a game!</strong></span>
+        <div class="intro-text" id="hello">
+            <span><strong>Hi, I'm Kat!</strong> <img class="decorative-text" src="../Pictures/Abstract/Flower.svg"
+                    alt="Decorative Flower"></span><br>
+            <span><strong>I’m a Product Designer</strong></span> <img class="decorative-text"
+                src="../Pictures/Abstract/Plus.svg" alt="Plus/And"> <span><strong>UI Artist,</strong></span><br>
+            <span>designing fun for everyone :)</span>
+        </div>
+
+        <div id="score-container">
+            <!-- Fruit Counter -->
+            <text id="fruit-counter" class="no-drag" transform="rotate(0)">0</text>
+
+            <!-- High Score -->
+            <div id="end-game-text">
+                <div id="high-score">High Score: 0</div>
+                <div id="play-again">To play again, drag the ball<br>
+                    or check out my portfolio below :)</div>
+            </div>
+        </div>
+
+        <!-- Super Fruit Time! Progress Bar -->
+        <div class="progress-bar-container game-start-dependant">
+            <svg viewBox="0 0 300 300">
+                <g transform="translate(150,150)">
+                    <circle cx="0" cy="0" r="125" class="progress-bar" id="background-bar"></circle>
+                </g>
+                <g transform="translate(150,150)">
+                    <circle cx="0" cy="0" r="125" class="progress-bar" id="collected-fruit-progress"></circle>
+                </g>
+                <g transform="translate(150,150)">
+                    <circle cx="0" cy="0" r="125" class="progress-bar" id="super-fruit-timer"></circle>
+                </g>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

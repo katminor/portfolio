@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #FFF;
+    font-family: Montserrat;
+}
+
+/* footer 
+-------------------
+-------------------
+-------------------*/
+.footer {
+    color: #fff; /* Text color */
+    display: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    transition: padding-left .25s ease-in-out, padding-right .25s ease-in-out, padding-top .25s ease-in-out, padding-bottom .25s ease-in-out;
+}
+
+#thanks {
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+
+.socials {
+    display: flex;
+    font-size: 24px;
+    margin-top: 60px;
+    gap: 60px;
+}
+
+.socials p {
+    position: relative; /* Position the <p> element */
+    text-decoration: none; /* Remove the default underline */
+    transition: all 0.25s ease;
+    cursor: pointer;
+    color:white;
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
+    cursor: pointer;
+}
+
+.socials p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Position the underline at the bottom of the <p> element */
+    width: 0;
+    height: 2px;
+    background-color: white; /* Change to the desired underline color */
+    transition: all 0.25s ease;
+    transform-origin: bottom left;
+}
+
+.socials p:hover::before {
+    width: 100%; /* Expand the underline to cover the <p> element */
+}
+
+.info {
+    margin-top: 12px;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+
+@media (max-width: 1200px) {
+    .footer {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 48px;
+        padding-bottom: 40px;
+    }
+
+    .socials {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 725px) {
+    .footer {
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    #thanks {
+        font-size: 32px;
+        margin-top: 0px;
+        margin-bottom: 24px;
+    }
+    
+    .socials {
+        display: flex;
+        font-size: 18px;
+        margin-top: 60px;
+    }
+    
+    .info {
+        margin-top: 12px;
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    #thanks {
+        font-size: 24px;
+        margin-top: 0px;
+        margin-bottom: 18px;
+    }
+    
+    .socials {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        margin-top: 40px;
+    }
+    
+    .info {
+        margin-top: 12px;
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 432px) {
+    .socials {
+        display: block;
+    }
+
+    .socials p {
+        margin-top: 8px;
+        margin-right: 60px;
+        display: inline-block;
+        margin-bottom: 4px;
+    }
+}
+
+@media (max-width: 350px) {
+    .footer {
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
+}
+
+@media (max-width: 275px) {
+    #email {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 225px) {
+    .footer {
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
+}
