@@ -1,4 +1,3 @@
-/* Reset some default styles */
 body, ul {
     margin: 0;
     padding: 0;
@@ -39,11 +38,14 @@ border: none;
     overflow: hidden;
 }
 
+#game-container {
+    z-index: 0;
+}
+
 .project-option {
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     background-color: #1A1A1A;
-    backface-visibility: hidden;
     color: white;
     margin: 0;
     display: flex;
@@ -54,6 +56,7 @@ border: none;
     margin-right: 10%;
     opacity: 0;
     transform: translateX(-5%);
+    backface-visibility: hidden;
     transition: opacity 0.5s, transform 0.5s;
 }
 
@@ -109,6 +112,7 @@ border: none;
     height: 1px;
     background-color: #FFF;
     border: none;
+    z-index: 1;
 }
 
 .final-divider {
