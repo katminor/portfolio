@@ -1,0 +1,32 @@
+.margin {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+@media (max-width: 1200px) {
+    .margin {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .margin {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 725px) {
+    .margin {
+        margin-left: 36px;
+        margin-right: 36px;
+    }
+}
+
+@media (max-width: 500px) {
+    .margin {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+}
