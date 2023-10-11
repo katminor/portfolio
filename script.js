@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
     // Adjust the size of super fruit game
     // Get references to the elements
@@ -24,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Set the new width and height for superfruitGame
         superfruitGame.style.width = viewportWidth + 'px';
         superfruitGame.style.height = newHeight + 'px';
-        superfruitGame.style.marginTop = navbarHeight + 'px';
+        superfruitGame.style.marginTop = (navbarHeight - 2) + 'px';
     }
 
     // Call the adjustElementSize function when the window is resized
@@ -32,25 +30,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Call the adjustElementSize function on page load
     adjustElementSize();
-
-    // JavaScript to observe when the element is in the viewport
-    const options = {
-        threshold: 0.025, // Adjust this value to control when the transition starts
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            } else {
-                entry.target.classList.remove('active'); // Remove the 'active' class when not in viewport
-            }
-        });
-    }, options);
-
-    const projectOptionElements = document.querySelectorAll('.project-option');
-    projectOptionElements.forEach((element) => {
-        observer.observe(element);
-    });
 });
 

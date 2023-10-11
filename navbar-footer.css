@@ -1,0 +1,488 @@
+#navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: -2px;
+    box-shadow: 0 -2px 0 #1A1A1A;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#footer {
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Navbar 
+-------------------
+-------------------
+-------------------*/
+.navbar {
+    color: #fff; /* Text color */
+    background-color:#1A1A1A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    transition: padding-left .25s ease-in-out, padding-right .25s ease-in-out, padding-top .25s ease-in-out, padding-bottom .25s ease-in-out;
+}
+
+/* Logo name
+-------------------
+-------------------
+-------------------*/
+
+#logo-name {
+font-size: 28px;
+line-height: 40px;
+margin-left: 16px;
+font-style: normal;
+font-weight: 700;
+white-space: nowrap;
+transition: font-size .25s ease-in-out, margin-left .25s ease-in-out;
+padding: 0px;
+}
+
+/* Logo image 
+-------------------
+-------------------
+-------------------*/
+
+#logo-img {
+    transition: width .25s ease-in-out, height .25s ease-in-out;
+    width: 48px;
+    height: 48px;
+}
+
+.navbar-left a {
+    text-decoration: none;
+    color: #fff; /* Text color */
+    display: flex;
+    align-items: center;
+    transition: transform 0.25s ease-in-out;
+}
+
+.navbar-left a:hover {
+    transform: scale(1.1);
+}
+
+/* Rightside navbar 
+-------------------
+-------------------
+-------------------*/
+
+/* Style the right side of the navbar (buttons) */
+.navbar-right ul {
+    list-style-type: none;
+    display: flex;
+    white-space: nowrap;
+    gap: 40px; 
+    font-size: 16px;
+    top: 50%;
+    left: 50%;
+    margin: 0px;
+    transition: font-size .25s ease-in-out, gap .25s ease-in-out;
+    align-items: center;
+}
+
+#hamburger {
+    display:none;
+    transition: width .25s ease-in-out, height .25s ease-in-out;
+}
+
+.primary {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 24px;
+    font-size: 18px;
+    border-radius: 24px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    align-self: flex-start; 
+    width: auto;
+}
+
+.secondary {
+    padding: 8px 0px;
+    border-radius: 24px; 
+    border: 0px solid #FFF;
+    text-decoration: none; /* Remove the default underline */
+    position: relative; /* Create a relative positioning context */
+    transition: all 0.25s ease; /* Add a transition for smooth animation */
+}
+
+
+.navbar-right a {
+    text-decoration: none;
+    color: #fff; /* Text color */
+    transition: transform 0.25s ease-in-out, font-weight .25 ease-in-out;
+}
+
+/* Apply the transition to navbar-right li elements */
+.navbar-right li {
+    transition: transform 0.25s ease-in-out;
+    transform-origin: center top;
+}
+
+.primary:hover {
+    background-color: white;
+    color: #1A1A1A;
+}
+
+.secondary::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Position the underline at the bottom of the text */
+    width: 0;
+    height: 2px;
+    background-color: white; /* Change to the desired underline color */
+    transition: all 0.25s ease; /* Add the same transition as above */
+    transform-origin: bottom left;
+}
+
+.secondary:hover::before {
+    width: 100%; /* Expand the underline to cover the text */
+}
+
+@media (max-width: 1200px) {
+    .navbar {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    #logo-name {
+        font-size: 28px;
+        line-height: 40px;
+        margin-left: 16px;
+    }
+
+    #logo-img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .navbar-right ul {
+        gap: 24px; 
+        font-size: 16px;
+    }
+
+    li {
+        display: none;
+    }
+
+    #hamburger {
+        display:inline-block;
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 725px) {
+    .navbar {
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    #logo-name {
+        font-size: 24px;
+        line-height: 28px;
+        margin-left: 14px;
+    }
+    
+    #logo-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    li {
+        display: none;
+    }
+    
+    #hamburger {
+        display:inline-block;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    #logo-name {
+        font-size: 18px;
+        line-height: 24px;
+        margin-left: 12px;
+    }
+    
+    #logo-img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    li {
+        display: none;
+    }
+
+    #hamburger {
+        display:inline-block;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 350px) {
+    .navbar {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    #logo-name {
+        font-size: 12px;
+        line-height: 18px;
+        margin-left: 9px;
+    }
+    
+    #logo-img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    li {
+        display: none;
+    }
+
+    #hamburger {
+        display:inline-block;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 225px) {
+    .navbar {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    #logo-name {
+        font-size: 8px;
+        line-height: 12px;
+        margin-left: 6px;
+    }
+    
+    #logo-img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    li {
+        display: none;
+    }
+
+    #hamburger {
+        display:inline-block;
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* footer 
+-------------------
+-------------------
+-------------------*/
+.footer {
+    color: #fff; /* Text color */
+    background-color: black;
+    display: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 80px;
+    padding-bottom: 90px;
+    transition: padding-left .25s ease-in-out, padding-right .25s ease-in-out, padding-top .25s ease-in-out, padding-bottom .25s ease-in-out;
+}
+
+#thanks {
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+
+.socials {
+    display: flex;
+    font-size: 24px;
+    margin-top: 60px;
+    gap: 60px;
+}
+
+.socials p {
+    position: relative; /* Position the <p> element */
+    text-decoration: none; /* Remove the default underline */
+    transition: all 0.25s ease;
+    cursor: pointer;
+    color:white;
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
+    cursor: pointer;
+}
+
+.socials p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Position the underline at the bottom of the <p> element */
+    width: 0;
+    height: 2px;
+    background-color: white; /* Change to the desired underline color */
+    transition: all 0.25s ease;
+    transform-origin: bottom left;
+}
+
+.socials p:hover::before {
+    width: 100%; /* Expand the underline to cover the <p> element */
+}
+
+.info {
+    margin-top: 12px;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+
+@media (max-width: 1200px) {
+    .footer {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 80px;
+        padding-bottom: 90px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 60px;
+        padding-bottom: 72px;
+    }
+
+    .socials {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 725px) {
+    .footer {
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 48px;
+        padding-bottom: 60px;
+    }
+
+    #thanks {
+        font-size: 32px;
+        margin-top: 0px;
+        margin-bottom: 24px;
+    }
+    
+    .socials {
+        display: flex;
+        font-size: 18px;
+        margin-top: 60px;
+    }
+    
+    .info {
+        margin-top: 12px;
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        padding-top: 40px;
+        padding-bottom: 48px;
+    }
+
+    #thanks {
+        font-size: 24px;
+        margin-top: 0px;
+        margin-bottom: 18px;
+    }
+    
+    .socials {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        margin-top: 40px;
+    }
+    
+    .info {
+        margin-top: 12px;
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 432px) {
+    .socials {
+        display: block;
+    }
+
+    .socials p {
+        margin-top: 8px;
+        margin-right: 60px;
+        display: inline-block;
+        margin-bottom: 4px;
+    }
+}
+
+@media (max-width: 350px) {
+    .footer {
+        padding-top: 32px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 275px) {
+    #email {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 225px) {
+    .footer {
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
+}

@@ -1,7 +1,6 @@
 body, ul {
     margin: 0;
     padding: 0;
-    spacing: 0px;
     padding: 0;
     border: none;
     background-color: #1a1a1a;
@@ -22,22 +21,6 @@ iframe {
 margin: 0;
 padding: 0;
 border: none;
-}
-
-#navbar {
-    outline: 2px solid #1A1A1A;
-    position: fixed;
-    width: 100%;
-    height: 80px;
-    transition: height .25s ease-in-out;
-    z-index: 3;
-    top: -2px;
-}
-
-#footer {
-    width: 100%;
-    height: 385.5px;
-    overflow: hidden;
 }
 
 #game-container {
@@ -200,8 +183,6 @@ button:hover {
     color: #1A1A1A;
 }
 
-
-
 @media (max-width: 1200px) {
     .work-divider {
         margin-left: 60px;
@@ -213,10 +194,6 @@ button:hover {
     .project-option {
         margin-left: 60px;
         margin-right: 60px;
-    }
-
-    #footer {
-        height: 385.5px;
     }
 }
 
@@ -236,10 +213,6 @@ button:hover {
         margin-bottom: 40px;
     }
 
-    #footer {
-        height: 375.5px;
-    }
-
     .project-option {
         margin-left: 60px;
         margin-right: 60px;
@@ -254,9 +227,6 @@ button:hover {
 }
 
 @media (max-width: 725px) {
-    #navbar {
-        height: 72px;
-    }
 
     .project-option {
         flex-direction: column;
@@ -270,16 +240,9 @@ button:hover {
         margin-top: 40px;
         margin-bottom: 40px;
     }
-
-    #footer {
-        height: 307.5px;
-    }
 }
 
 @media (max-width: 500px) {
-    #navbar {
-        height: 68px;
-    }
 
     .project-option {
         margin-left: 18px;
@@ -292,43 +255,4 @@ button:hover {
         margin-top: 36px;
         margin-bottom: 36px;
     }
-
-    #footer {
-        height: 280.5px;
-    }
-}
-
-@media (max-width: 432px) {
-    #footer {
-        height: 320.5px;
-    }
-}
-
-@media (max-width: 342px) {
-    #footer {
-        height: 350.5px;
-    }
-}
-
-@media (max-width: 300px) {
-    #footer {
-        height: 375.5px;
-    }
-}
-
-@media (max-width: 255px) {
-    #footer {
-        height: 390px;
-    }
-}
-
-@media (max-width: 225px) {
-    #navbar {
-        height: 40px;
-    }
-
-    #footer {
-        height: 425px;
-    }
-
 }

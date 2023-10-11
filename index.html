@@ -6,13 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kat Minor Portfolio</title>
     <link rel="stylesheet" type="text/css" href="portfolioIndex.css">
+    <link rel="stylesheet" type="text/css" href="navbar-footer.css">
     <script src="script.js"></script>
+    <script src="left-right-animations.js"></script>
     <script src="PreviewImages/HomeSection.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <iframe src="NavBar/navbar.html" id="navbar"></iframe>
+    <div id="navbar">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html">
+                    <img id="logo-img" src="Pictures/Logo/Logo.svg" alt="Rainbow Logo">
+                    <span id="logo-name">kat minor</span>
+                </a>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="Other Pages/fingerfood.html" class="secondary">finger food</a></li>
+                    <li><a href="Other Pages/resume.html" class="secondary">resume</a></li>
+                    <li><a href="Other Pages/about.html" class="primary">about</a></li>
+                    <li><a href="Other Pages/work.html" class="primary">work</a></li>
+                    <img id="hamburger" src="Pictures/Navbar/Menu.svg" alt="Menu Navbar">
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div id="game-container">
         <iframe src="SuperFruitGame/SuperFruitGameFinal.html" id="super-fruit-game"></iframe>
     </div>
@@ -21,7 +41,7 @@
         <p>selected work</p>
         <hr>
     </div>
-    <div class="project-option">
+    <a href="Project Pages/MLB/mlb.html" class="project-option animate" id="mlb">
         <iframe class="preview-image" src="PreviewImages/MLB/MLBPreview.html" frameborder="0" scrolling="no"></iframe>
         <div class="description-container">
             <div class="project-title-container">
@@ -29,16 +49,16 @@
                 <img class="divider-decoration" src="Pictures/Abstract/Star.svg">
                 <p class="type">Game UI</p>
             </div>
-            <p class="project-description">Menus and settings are important, but too much can make overwhelm players. 
+            <p class="project-description">Menus and settings are important, but too much can overwhelm players. 
                 <strong>How can we make these screens more streamlined?</strong></p>
             <button>let's go</button>
         </div>
-    </div>
+    </a>
     <div class="work-divider">
         <hr>
         <img class="star" src="Pictures/Abstract/Star.svg">
     </div>
-    <div class="project-option right">
+    <a href="Project Pages/Whats Cooking/WhatsCooking.html" class="project-option animate right">
         <div class="description-container">
             <div class="project-title-container">
                 <p class="title"><strong>What's Cooking?</strong></p>
@@ -48,14 +68,14 @@
             <p class="project-description">How do you explain making burgers to an AI? <strong>What does efficient in-game communication between humans and AI look like?</strong></p>
             <button>let's go</button>
         </div>
-        <iframe class="preview-image" src="PreviewImages/What's Cooking/What'sCookingPreview.html" frameborder="0" scrolling="no"></iframe>
-    </div>
+        <iframe class="preview-image" src="PreviewImages/What's Cooking/What'sCookingPreview.html" data-href="Project Pages/Whats Cooking/WhatsCooking.html" frameborder="0" scrolling="no"></iframe>
+    </a>
     <div class="work-divider">
         <hr>
         <img class="star" src="Pictures/Abstract/Star.svg">
     </div>
-    <div class="project-option">
-        <iframe class="preview-image" src="PreviewImages/Grapevine/GrapevinePreview.html" frameborder="0" scrolling="no"></iframe>
+    <a href="Project Pages/Grapevine/grapevine.html" class="project-option animate">
+        <iframe class="preview-image" src="PreviewImages/Grapevine/GrapevinePreview.html" data-href="Project Pages/Grapevine/grapevine.html" frameborder="0" scrolling="no"></iframe>
         <div class="description-container">
             <div class="project-title-container">
                 <p class="title"><strong>Grapevine</strong></p>
@@ -65,12 +85,12 @@
             <p class="project-description">Being lonely is actually dangerous! <strong>How can we help older romantics feel safer finding love online?</strong></p>
             <button>let's go</button>
         </div>
-    </div>
+    </a>
     <div class="work-divider">
         <hr>
         <img class="star" src="Pictures/Abstract/Star.svg">
     </div>
-    <div class="project-option right">
+    <a href="Project Pages/Drift/drift.html" class="project-option animate right">
         <div class="description-container">
             <div class="project-title-container">
                 <p class="title"><strong>Drift Mobile</strong></p>
@@ -80,10 +100,20 @@
             <p class="project-description">Not everyone wants to be stuck in front of a screen all day. <strong>How can we make selling via mobile easier?</strong></p>
             <button>let's go</button>
         </div>
-        <iframe class="preview-image" src="PreviewImages/Drift/DriftPreview.html" frameborder="0" scrolling="no"></iframe>
-    </div>
+        <iframe class="preview-image" src="PreviewImages/Drift/DriftPreview.html" data-href="Project Pages/Drift/drift.html" frameborder="0" scrolling="no"></iframe>
+    </a>
     <hr class="final-divider">
-    <iframe src="Footer/footer.html" id="footer" scrolling="no"></iframe>
+    <div id="footer">
+        <div class="footer">
+            <p id="thanks">Thanks for stopping by!</p>
+            <p class="info">I'm currently looking for full time and contract Product Design and UI Artist positions.</p>
+            <p class="info">If you're interested in my work, shoot me a message!</p>
+            <div class="socials">
+                <p id="email"><a href="mailto:kathrynleeminor@gmail.com">kathrynleeminor@gmail.com</a></p>
+                <p><a href="https://www.linkedin.com/in/kathryn-minor-design/">LinkedIn</a></p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
