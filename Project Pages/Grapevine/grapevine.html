@@ -4,18 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kat Minor Portfolio Grapevine</title>
+    <title>Kat Minor Portfolio</title>
     <link rel="stylesheet" type="text/css" href="../projectPage.css">
+    <link rel="stylesheet" type="text/css" href="../../navbar-footer.css">
+    <link rel="stylesheet" type="text/css" href="../../margin.css">
+    <link rel="stylesheet" type="text/css" href="../islands.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="../../left-right-animations.js"></script>
     <script src="../projectpage.js"></script>
+    <script src="../islands.js"></script>
 </head>
 
 <body>
-    <iframe src="../../NavBar/navbar.html" id="navbar"></iframe>
-    <div id="header-image"></div>
-    <div id="margin">
+    <div id="navbar">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="../../index.html">
+                    <img id="logo-img" src="../../Pictures/Logo/Logo.svg" alt="Rainbow Logo">
+                    <span id="logo-name">kat minor</span>
+                </a>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="../../Other Pages/fingerfood.html" class="secondary">finger food</a></li>
+                    <li><a href="../../Other Pages/resume.html" class="secondary">resume</a></li>
+                    <li><a href="../../Other Pages/about.html" class="primary">about</a></li>
+                    <li><a href="../../Other Pages/work.html" class="primary">work</a></li>
+                    <img id="hamburger" src="../../Pictures/Navbar/Menu.svg" alt="Menu Navbar">
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="header-image">
+        <div class="margin animate">
+            <div class="margin">
+                <div class="margin">
+                    <div class="row">
+                        <div class="img-container">
+                            <img class="screen" src="../../Pictures/Grapevine/Screens/Events/Events-4.png"
+                                alt="Drift Add Saved Reply Screen">
+                        </div>
+                        <div class="img-container">
+                            <img class="screen" src="../../Pictures/Grapevine/Screens/Gifs/Matching.gif"
+                                alt="Drift Conversation Screen">
+                        </div>
+                        <div class="img-container">
+                            <img class="screen" src="../../Pictures/Grapevine/Screens/SignUp/Events.png"
+                                alt="Drift Conversation Actions Bar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin">
         <div id="intro">
-            <div id="intro-text" class="row block">
+            <div id="intro-text" class="row block animate">
                 <div class="seventy-five description-container">
                     <div class="project-divider">
                         <div class="divider-text row">
@@ -23,17 +67,15 @@
                         </div>
                         <hr>
                     </div>
-                    <h1>Project Title</h1>
-                    <h2>Small little description</h2>
-                    <p>Maximilian Toch (July 17, 1864 – May 28, 1946) was an American paint manufacturer and industrial
-                        chemist who developed a concrete filler method that was used in the construction of the Panama
-                        Canal. He was the co-owner of the New York firms Toch Brothers and the Standard Varnish Works,
-                        where
-                        he was head of research and production. Before and during World War I, he was a major
-                        contributor to
-                        the development of ship camouflage in the United States, as well as an early practitioner of the
-                        use
-                        of chemistry in the authentication of works of art.</p>
+                    <h1>Grapevine</h1>
+                    <h2 class="gray">Addressing Loneliness and Social Isolation in Older Populations<br><br></h2>
+                    <p><strong>What is Grapevine?</strong><br>
+                        Grapevine is a digital platform designed to combat the prevalent issue of loneliness and social
+                        isolation among adults aged 60 and older. A significant portion of these older adults
+                        state that they deal with social isolation. Grapevine provides a digital space where older
+                        individuals can connect, form meaningful relationships, and combat the negative impacts of
+                        social isolation.
+                    </p>
                 </div>
                 <div class="twenty-five" id="stats">
                     <div class="project-divider">
@@ -44,19 +86,19 @@
                     </div>
                     <div class="stat">
                         <h3>My Role</h3>
-                        <p>Text goes here</p>
+                        <p>Product Designer</p>
                     </div>
                     <div class="stat">
                         <h3>Timeline</h3>
-                        <p>Text goes here</p>
+                        <p>2 Months</p>
                     </div>
                     <div class="stat">
                         <h3>The Team</h3>
-                        <p>Text goes here</p>
+                        <p>Miso Kim - Interaction Design 2 Professor</p>
                     </div>
                 </div>
             </div>
-            <div id="in-summary" class="block">
+            <div id="in-summary" class="block animate right">
                 <div class="project-divider">
                     <div class="divider-text row">
                         <h4>In Summary</h4>
@@ -65,54 +107,122 @@
                 </div>
                 <div class="row evenly-spaced">
                     <div class="stat">
-                        <h3>Problem</h3>
-                        <p>China–Equatorial Guinea relations refer to the foreign relations between China and
-                            Equatorial Guinea. China and Equatorial Guinea established diplomatic relations on
-                            October 15, 1970.[1]: 347  Following a coup-d’état which brought current president
-                            Teodoro Obiang Nguema Mbasogo to power, diplomatic relations were temporarily suspended
-                            and resumed again in 1985.</p>
+                        <h3>The Problem</h3>
+                        <p>Loneliness is a prevalent issue among adults aged 60 and older, with 43% reporting feelings
+                            of isolation. This condition has been linked to severe health risks including premature
+                            mortality, dementia, heart disease, and stroke. The lack of meaningful social interactions
+                            can have profound consequences on the overall well-being of this demographic.</p>
                     </div>
                     <div class="stat">
                         <h3>My Solution</h3>
-                        <p>George Dewey Durning (May 9, 1898 – April 18, 1986) was a right fielder in Major League
-                            Baseball who played for the Philadelphia Phillies in its 1925 season. He was officially
-                            listed as standing 5 feet 11 inches (180 cm) and 175 pounds (79 kg).[1] In addition to
-                            his brief major league career, Durning played four seasons for an assortment of minor
-                            league baseball teams. He was born in Philadelphia, Pennsylvania.</p>
+                        <p>Grapevine reimagines dating for older adults, embracing familiar methods like in-person
+                            meet-ups, phone conversations, and letter writing. Placing a strong emphasis on safety and
+                            trust, Grapevine facilitates new connections for these individuals, broadening their social
+                            horizons. This helps to counter the prevelance of loneliness for older generations.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div id="header-image"></div>
-        <div id="my-solution" class="block">
-            <div class="description-container">
-                <div class="project-divider">
-                    <div class="divider-text row">
-                        <h4>My Solution: Final Design</h4>
-                    </div>
-                    <hr>
-                </div>
-                <h1>Overall Solution Term</h1>
-                <h2>Small little description</h2>
-                <p>Maximilian Toch (July 17, 1864 – May 28, 1946) was an American paint manufacturer and industrial
-                    chemist who developed a concrete filler method that was used in the construction of the Panama
-                    Canal. He was the co-owner of the New York firms Toch Brothers and the Standard Varnish Works,
-                    where
-                    he was head of research and production. Before and during World War I, he was a major
-                    contributor to
-                    the development of ship camouflage in the United States, as well as an early practitioner of the
-                    use
-                    of chemistry in the authentication of works of art.</p>
-            </div>
-            <div class="row">
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
             </div>
         </div>
     </div>
-    <iframe src="../../Footer/footer.html" id="footer"></iframe>
+    <div class="video-container block">
+        <div class="margin row animate">
+            <video class="video" controls autoplay muted>
+                <source src="../../Pictures/Grapevine/Demo/Grapevine Demo.mp4" type="video/mp4">
+            </video>
+            <div class="row block">
+                <div class="description-container">
+                    <h1>The Deliverable</h1>
+                    <h2 class="gray">Introducing Grapevine<br><br></h2>
+                    <p><strong>Grapevine is an app for the romantics.</strong>
+                        This service is catered to people who have been divorced, widowed, or remained single past the
+                        age of 50.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="core-features" class="margin">
+        <div class="project-divider animate">
+            <div class="divider-text row">
+                <h4>Core Features</h4>
+            </div>
+            <hr>
+        </div>
+        <div class="row centered animate">
+            <div class="text-with-image">
+                <h2>1. Feel safer with <strong>Grapevine Onboarding</strong>
+                </h2>
+                <p>Grapevine's onboarding process is designed for simplicity and comfort, using a one-action-per-page
+                    approach. It accommodates older romantics by offering sign-up through phone number, Google Gmail, or
+                    Facebook, recognizing many may prefer these options to remembering a username and password.</p>
+            </div>
+            <div class="image">
+                <img class="screen" src="../../Pictures/Grapevine/Screens/Gifs/Perfect Pair.gif" alt="Grapevine Onboarding">
+            </div>
+        </div>
+        <div class="row block centered animate right">
+            <div class="text-with-image">
+                <h2>2. Make it all about you with <strong>Profiles</strong></h2>
+                <p>Grapevine encourages romantics to create detailed profiles that go beyond appearances. Users can
+                    share their interests, photos of pets, and favorite artists, providing a more authentic glimpse into
+                    their personalities. Vinny and Viney (The Grape Mascots) also prompt romantics to initiate matches,
+                    fostering an environment of taking chances.</p>
+            </div>
+            <div class="image">
+                <img class="screen" src="../../Pictures/Drift/Screens/Gifs/SavedReply.gif"
+                    alt="Drift Add Saved Reply Screen">
+            </div>
+        </div>
+        <div class="row block centered animate">
+            <div class="text-with-image">
+                <h2>3. Find your people through <strong>Matching</strong></h2>
+                <p>Grapevine's algorithm suggests matches based on shared interests and past matches. After users
+                    connect, they receive notifications and reminders about their match. Vinny and Viney offer
+                    personalized tips, like going to events together..</p>
+            </div>
+            <div class="image">
+                <img class="screen" src="../../Pictures/Drift/Screens/Gifs/SlashCommand.gif"
+                    alt="Drift Slash Command Gif">
+            </div>
+        </div>
+        <div class="row block centered animate right">
+            <div class="text-with-image">
+                <h2>4. Get to know each other through <strong>Events, Phone calls, and Letters</strong></h2>
+                <p>Grapevine aims to create a positive dating experience by facilitating in-person events, phone calls,
+                    and letter-writing. These activities, whether initiated by users themselves or suggested by the app,
+                    promote genuine face-to-face interactions and help users to form deeper connections.</p>
+            </div>
+            <div class="image">
+                <img class="screen" src="../../Pictures/Drift/Screens/Gifs/Account.gif" alt="Drift Slash Command Gif">
+            </div>
+        </div>
+    </div>
+    <div class="full-width animate block big">
+        <h1 class="margin section"><strong>Check out my other projects!</strong></h1>
+        <div class="island-container">
+            <div class="column island centered">
+                <img class="island-image" data-href="../Drift/Drift.html" src="../../Pictures/Islands/Drift.png">
+                <h2>Drift</h2>
+            </div>
+            <div class="column island centered">
+                <img class="island-image" data-href="../Whats Cooking/WhatsCooking.html"
+                    src="../../Pictures/Islands/What's Cooking.png">
+                <h2>What's Cooking</h2>
+            </div>
+            <div class="column island centered">
+                <img class="island-image" data-href="../MLB/mlb.html" src="../../Pictures/Islands/MLB.png">
+                <h2>MLB The Show</h2>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer">
+            <p id="thanks">Thanks for stopping by!</p>
+            <p class="info">I'm currently looking for full time and contract Product Design and UI Artist positions.</p>
+            <p class="info">If you're interested in my work, shoot me a message!</p>
+            <div class="socials">
+                <p id="email"><a href="mailto:kathrynleeminor@gmail.com">kathrynleeminor@gmail.com</a></p>
+                <p><a href="https://www.linkedin.com/in/kathryn-minor-design/">LinkedIn</a></p>
+            </div>
+        </div>
+    </div>
 </body>
-
-</html>
