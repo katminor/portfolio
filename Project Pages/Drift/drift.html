@@ -13,10 +13,29 @@
     <script src="../../left-right-animations.js"></script>
     <script src="../projectpage.js"></script>
     <script src="../change-image.js"></script>
+    <script src="../islands.js"></script>
 </head>
 
 <body>
-    <iframe src="../../NavBar/navbar.html" id="navbar"></iframe>
+    <div id="navbar">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="../../index.html">
+                    <img id="logo-img" src="../../Pictures/Logo/Logo.svg" alt="Rainbow Logo">
+                    <span id="logo-name">kat minor</span>
+                </a>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="../../Other Pages/fingerfood.html" class="secondary">finger food</a></li>
+                    <li><a href="../../Other Pages/resume.html" class="secondary">resume</a></li>
+                    <li><a href="../../Other Pages/about.html" class="primary">about</a></li>
+                    <li><a href="../../Other Pages/work.html" class="primary">work</a></li>
+                    <img id="hamburger" src="../../Pictures/Navbar/Menu.svg" alt="Menu Navbar">
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div id="header-image">
         <div class="margin animate">
             <div class="margin">
@@ -670,14 +689,17 @@
                         <div class="img-container animate">
                             <img class="screen gap"
                                 src="../../Pictures/Drift/Screens/Mobile Messaging/Mobile Marketing/Activity Campaign.png">
+                            <p>The Feed</p>
                         </div>
                         <div class="img-container animate">
                             <img class="screen gap"
                                 src="../../Pictures/Drift/Screens/Mobile Messaging/Mobile Marketing/All Inboxes Campaign.png">
+                            <p>Conversations</p>
                         </div>
                         <div class="img-container animate">
                             <img class="screen gap"
                                 src="../../Pictures/Drift/Screens/Mobile Messaging/Mobile Marketing/Personal Video Library Campaign.png">
+                            <p>Video Library</p>
                         </div>
                     </div>
                     <div class="text-container animate">
@@ -700,14 +722,17 @@
                         <div class="img-container animate">
                             <img class="screen gap"
                                 src="../../Pictures/Drift/Screens/Mobile Messaging/Mobile Marketing/Activity.png">
+                            <p>The Feed</p>
                         </div>
                         <div class="img-container animate">
                             <img class="screen gap"
                                 src="../../Pictures/Drift/Screens/Mobile Messaging/Mobile Marketing/Conversation.png">
+                            <p>Conversations</p>
                         </div>
                         <div class="img-container animate">
                             <img class="screen gap"
                                 src="../../Pictures/Drift/Screens/Mobile Messaging/Mobile Marketing/Personal Video Library.png">
+                            <p>Video Library</p>
                         </div>
                     </div>
                     <div class="text-container animate">
@@ -756,7 +781,8 @@
                     <h2 class="section">Looking back on this process, I learned a lot!<br>Here are my key take-aways.
                     </h2>
                 </div>
-                <div class="row animate block level-seven-hundred-column section big" style="align-items:flex-start">
+                <div class="row animate block evenly-spaced level-seven-hundred-column section big"
+                    style="align-items:flex-start">
                     <div>
                         <h2><strong>1. How to optimize for speed and efficiency</strong></h2>
                     </div>
@@ -770,7 +796,7 @@
                             caters to the specific needs of mobile users.</p>
                     </div>
                 </div>
-                <div class="row animate right block level-seven-hundred-column section big"
+                <div class="row animate right evenly-spaced block level-seven-hundred-column section big"
                     style="align-items:flex-start">
                     <div>
                         <h2><strong>2. How to prioritize key features</strong></h2>
@@ -785,7 +811,8 @@
                             which I plan to apply in future projects.</p>
                     </div>
                 </div>
-                <div class="row animate block level-seven-hundred-column section big" style="align-items:flex-start">
+                <div class="row animate block evenly-spaced level-seven-hundred-column section big"
+                    style="align-items:flex-start">
                     <div>
                         <h2><strong>3. How to create a consistent product experience</strong></h2>
                     </div>
@@ -802,14 +829,33 @@
         </div>
     </div>
     <div class="full-width animate block big">
-        <h2 class="island-margin section"><strong>Check out my other projects!</strong></h2>
+        <h1 class="margin section"><strong>Check out my other projects!</strong></h1>
         <div class="island-container">
-            <img class="island" src="../../Pictures/Islands/Grapevine.png">
-            <img class="island" src="../../Pictures/Islands/MLB.png">
-            <img class="island" src="../../Pictures/Islands/What's Cooking.png">
+            <div class="column island centered">
+                <img class="island-image" data-href="../Grapevine/grapevine.html" src="../../Pictures/Islands/Grapevine.png">
+                <h2>Grapevine</h2>
+            </div>
+            <div class="column island centered">
+                <img class="island-image" data-href="../Whats Cooking/WhatsCooking.html" src="../../Pictures/Islands/What's Cooking.png">
+                <h2>What's Cooking</h2>
+            </div>
+            <div class="column island centered">
+                <img class="island-image" data-href="../MLB/mlb.html" src="../../Pictures/Islands/MLB.png">
+                <h2>MLB The Show</h2>
+            </div>
         </div>
     </div>
-    <iframe src="../../Footer/footer.html" id="footer"></iframe>
+    <div id="footer">
+        <div class="footer">
+            <p id="thanks">Thanks for stopping by!</p>
+            <p class="info">I'm currently looking for full time and contract Product Design and UI Artist positions.</p>
+            <p class="info">If you're interested in my work, shoot me a message!</p>
+            <div class="socials">
+                <p id="email"><a href="mailto:kathrynleeminor@gmail.com">kathrynleeminor@gmail.com</a></p>
+                <p><a href="https://www.linkedin.com/in/kathryn-minor-design/">LinkedIn</a></p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
