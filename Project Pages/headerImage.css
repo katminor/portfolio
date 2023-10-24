@@ -1,0 +1,274 @@
+.header-image {
+    width: 100%;
+    background-color: black;
+    display: block;
+    overflow: hidden;
+}
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-row-no-gap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Grapevine */
+
+.grapevine {
+    transform: translateY(-300px) translateX(0px) scale(1.0935) rotate(0deg);
+}
+
+.header-screen-grapevine {
+    background-color: gray;
+    width: 230.25px;
+    height: 486.5px;
+}
+
+.header-alignment-margin-grapevine {
+    margin-top: -360px;
+}
+
+.header-alignment-margin-grapevine-two {
+    margin-bottom: 560px;
+}
+
+#header-experience {
+    width: 482.37px;
+    height: 285.84px;
+}
+
+#header-loop {
+    width: 453.51px;
+    height: 246.49px;
+    transform: rotate(-9.23deg);
+}
+
+/* Drift */
+
+.drift {
+    transform: translateY(-150px) translateX(0px) scale(1.2465) rotate(0deg);
+}
+
+.header-alignment-margin-drift {
+    margin-top: -120px;
+}
+
+.header-alignment-margin-drift-2 {
+    margin-top: 200px;
+}
+
+.header-screen-drift { 
+    background-color:gray;
+	height:471.57px;
+}
+
+.header-feed-card {
+    height:200.72px;
+    width:402.41px;
+}
+
+.header-feed-card.header-bottom {
+    height: 286.34px;
+    width: 402.41px;
+}
+
+/* MLB */
+
+.mlb {
+    transform: translateY(-320px) translateX(0px) scale(1) rotate(0deg);
+}
+
+.header-screen-mlb, .header-screen-whatscooking{ 
+    background-color:gray;
+	width:540px;
+	height:303px;
+}
+
+.header-alignment-margin-mlb {
+    margin-bottom: 800px;
+}
+
+.header-banner { 
+    background-color:gray;
+	width:540px;
+	height:62px;
+}
+
+.header-cards { 
+    margin-top: -240px;
+    display: grid;
+    grid-template-columns: repeat(2, 254px);
+    grid-template-rows: repeat(2, 358.26px);
+    gap: 32px;
+}
+
+.header-card { 
+    background-color:gray;
+    width: 254px;
+    height: 358.26px;
+}
+
+.header-icon { 
+	width:118px;
+	height:118px;
+}
+
+.header-right-aligned {
+    justify-content: flex-end;
+}
+
+.header-top-aligned {
+    align-items: flex-start;
+}
+
+.header-horizontal-aligned {
+    align-items: center;
+}
+
+.header-justify {
+    justify-content: space-between;
+}
+
+/* What's Cooking */
+
+.whatscooking {
+    transform: translateY(-100px) translateX(0px) scale(1) rotate(0deg);
+}
+
+.header-alignment-whatscooking {
+    margin-top: 0px;
+}
+
+.header-alignment-whatscooking-two {
+    margin-top: -300px;
+}
+
+@media (min-width: 1260px){
+    .header-image {
+        height: 540px;
+    }
+}
+
+@media (max-width: 1259px) and (min-width: 1000px){
+    .header-image {
+        height: 540px;
+    }
+
+    .grapevine {
+        transform: translateY(-450px) translateX(0px) scale(.8745) rotate(0deg);
+    }
+
+    .drift {
+        transform: translateY(-240px) translateX(0px) scale(.997) rotate(0deg);
+    }
+
+    .mlb {
+        transform: translateY(-450px) translateX(0px) scale(.8) rotate(0deg);
+    }
+
+    .whatscooking {
+        transform: translateY(-160px) translateX(0px) scale(.8) rotate(0deg);
+    }
+}
+
+@media (max-width: 999px) and (min-width: 725px) {
+    .header-image {
+        height: 480px;
+    }
+
+    .grapevine {
+        transform: translateY(-600px) translateX(0px) scale(.689) rotate(0deg);
+    }
+
+    .drift {
+        transform: translateY(-300px) translateX(0px) scale(.7865) rotate(0deg);
+    }
+
+    .mlb {
+        transform: translateY(-550px) translateX(0px) scale(.63) rotate(0deg);
+    }
+
+    .whatscooking {
+        transform: translateY(-210px) translateX(0px) scale(.63) rotate(0deg);
+    }
+}
+
+@media (max-width: 724px) and (min-width: 500px) {
+    .header-image {
+        height: 320px;
+    }
+
+    .grapevine {
+        transform: translateY(-800px) translateX(0px) scale(.459) rotate(0deg);
+    }
+
+    .drift {
+        transform: translateY(-380px) translateX(0px) scale(.524) rotate(0deg);
+    }
+
+    .mlb {
+        transform: translateY(-640px) translateX(0px) scale(.42) rotate(0deg);
+    }
+
+    .whatscooking {
+        transform: translateY(-300px) translateX(0px) scale(.42) rotate(0deg);
+    }
+}
+
+@media (max-width: 499px) and (min-width: 350px) {
+    .header-image {
+        height: 220px;
+    }
+
+    .grapevine {
+        transform: translateY(-880px) translateX(0px) scale(.328) rotate(0deg);
+    }
+
+    .drift {
+        transform: translateY(-440px) translateX(0px) scale(.3745) rotate(0deg);
+    }
+
+    .mlb {
+        transform: translateY(-760px) translateX(0px) scale(.3) rotate(0deg);
+    }
+
+    .whatscooking {
+        transform: translateY(-360px) translateX(0px) scale(.3) rotate(0deg);
+    }
+}
+
+@media (max-width: 350px) and (min-width: 0px) {
+    .header-image {
+        height: 180px;
+    }
+
+    .grapevine {
+        transform: translateY(-900px) translateX(0px) scale(.273) rotate(0deg);
+    }
+
+    .drift {
+        transform: translateY(-475px) translateX(0px) scale(.3115) rotate(0deg);
+    }
+
+    .mlb {
+        transform: translateY(-800px) translateX(0px) scale(.25) rotate(0deg);
+    }
+
+    .whatscooking {
+        transform: translateY(-370px) translateX(0px) scale(.25) rotate(0deg);
+    }
+}

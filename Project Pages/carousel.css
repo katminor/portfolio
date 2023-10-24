@@ -1,0 +1,101 @@
+.carousel-container {
+    position: relative;
+    max-height: 600px;
+    overflow: hidden;
+    text-align: center; /* Center the content */
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.carousel-wrapper {
+    position: relative; /* Make the wrapper relative */
+    display: inline-block; /* Display as inline block */
+    white-space: nowrap; /* Prevent line breaks */
+    transition: transform 0.3s ease;
+}
+
+.carousel {
+    display: inline-block; /* Display as inline block */
+}
+
+.carousel-item {
+    display: inline-block; /* Display as inline block */
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center; /* Center the content */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 600px;
+    height: auto;
+    display: inline-block; /* Center the image */
+    margin: 0 auto; /* Center the image */
+}
+
+.prev-btn, .next-btn {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 32px; /* Increased font size for arrows */
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; /* Center the arrow */
+}
+
+.prev-btn {
+    left: 0;
+    text-align: left;
+    padding-left: 12px;
+}
+
+.next-btn {
+    right: 0;
+    text-align: right;
+}
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.carousel-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background-color: #555;
+}
+
+.text-above-carousel {
+    text-align: center;
+}
+
+.text-above-carousel h2 {
+    max-width: 100%; /* Make the text width match the images */
+}
+
+@media (max-width: 725px) {
+    .prev-btn, .next-btn {
+        font-size: 24px; 
+}
+}
+
+@media (max-width: 500px) {
+    .prev-btn, .next-btn {
+        font-size: 20px; 
+}
+}
+
+@media (max-width: 350px) {
+    .prev-btn, .next-btn {
+        font-size: 18px; 
+}
+}
