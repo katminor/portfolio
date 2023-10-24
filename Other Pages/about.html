@@ -6,12 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kat Minor Portfolio</title>
     <link rel="stylesheet" type="text/css" href="../navbar-footer.css">
-    <script src="script.js"></script>
-    <script src="left-right-animations.js"></script>
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <link rel="stylesheet" type="text/css" href="../margin.css">
+    <link rel="stylesheet" type="text/css" href="../Project Pages/headerImage.css">
+    <link rel="stylesheet" type="text/css" href="../Project Pages/projectpage.css">
+    <script src="../navbar-footer.js"></script>
+    <script src="../left-right-animations.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="full-nav">
+        <div class="nav-options-container">
+            <div>
+                <h2><a href="../Project Pages/MLB/mlb.html" class="secondary">mlb</a></h2>
+                <h2><a href="../Project Pages/Whats Cooking/WhatsCooking.html" class="secondary">what's cooking?</a>
+                </h2>
+                <h2><a href="../Project Pages/Grapevine/grapevine.html" class="secondary">grapevine</a></h2>
+                <h2><a href="../Project Pages/Drift/drift.html" class="secondary">drift</a></h2>
+            </div>
+            <img class="divider-decoration-nav" src="../Pictures/Abstract/Star.svg">
+            <div>
+                <h2><a href="../Other Pages/about.html" class="secondary">about</a></h2>
+                <h2><a href="../Other Pages/work.html" class="secondary">work</a></h2>
+            </div>
+        </div>
+    </div>
     <div id="navbar">
         <nav class="navbar">
             <div class="navbar-left">
@@ -27,11 +47,86 @@
                     <li><a href="about.html" class="primary">about</a></li>
                     <li><a href="work.html" class="primary">work</a></li>
                     <img id="hamburger" src="../Pictures/Navbar/Menu.svg" alt="Menu Navbar">
+                    <img id="exit" src="../Pictures/Navbar/Exit.svg" alt="Menu Navbar">
                 </ul>
             </div>
         </nav>
     </div>
-    <h1>About</h1>
+    <div class="margin unit">
+        <div class="block big row full-width section animate level-one-thousand-column centered"
+            style="justify-content:flex-start">
+            <div class="text-container header-column header-gap">
+                <div>
+                    <h2>hi there!</h2>
+                    <h1 class="name">i'm kat :)</h1>
+                </div>
+                <p>I'm a designer from Louisville, Kentucky who loves games and fighting crime with my dog :). My
+                    favorite
+                    games
+                    are Fire Emblem Shadows of Valencia, Final Fantasy 7 Remake, and Hades. Recently, I have been really
+                    into
+                    rogue-like games and have been building my own which will hopefully be available to download on
+                    mobile
+                    sometime in 2025. I really like to just create things, it's fun to think that everything on this
+                    portfolio
+                    never existed until I made it. To me, that's really awesome.
+                    <br><br>
+                    Thanks for checking out my portfolio and reading my about! Feel free to check out my art below.
+                </p>
+            </div>
+            <div class="multi-screen-container one centered" id="about-image-container">
+                <div class="img-container" id="about-image">
+                    <img src="../Pictures/Self Pictures/profile2.webp" class="animate right screen"
+                        alt="Picture of Kat">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin unit centered" style="display:flex;">
+        <!--
+        <div class="header-column header-gap">
+            <div class="header-row header-gap ">
+                <div class="card-container">
+                <img src="../Pictures/Personal Art/Ghost.gif">
+            </div><div class="card-container">
+                <img src="../Pictures/Personal Art/Mush.gif"></div><div class="card-container">
+                <img src="../Pictures/Personal Art/Goblin Needs a Joblin Edit.webp"></div>
+            </div>
+            <div class="header-row header-gap">
+                <img src="../Pictures/Personal Art/Witchs Brew Fedex.webp">
+            </div>
+            <div class="header-row header-gap">
+                <img src="../Pictures/Personal Art/KDA Done.webp">
+                <img src="../Pictures/Personal Art/Prinny.webp">
+            </div>
+        </div>-->
+        <div class="card-holder">
+            <h2 class="space-around animate" style="justify-content:left; display: flex;">My art</h2>
+            <div class="card-column card-gap">
+                <div class="card-row card-gap full-width">
+                    <div class="card-column" style="width: 33.33%">
+                        <div class="card-container animate" style="height: 100%;">
+                            <img src="../Pictures/Personal Art/Ghost.gif" style="height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="card-column" style="width: 33.33%">
+                        <div class="card-container animate" style="height: 100%;">
+                            <img src="../Pictures/Personal Art/Mush.gif" style="height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="card-column" style="width: 33.33%">
+                        <div class="card-container animate" style="height: 100%;">
+                            <img src="../Pictures/Personal Art/Goblin Needs a Joblin Edit.webp"
+                                style="height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container animate" style="height: 100%;">
+                    <img src="../Pictures/Personal Art/Witchs Brew Fedex.webp" style="height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="footer">
         <div class="footer">
             <p id="thanks">Thanks for stopping by!</p>
