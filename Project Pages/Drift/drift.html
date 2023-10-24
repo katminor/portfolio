@@ -5,18 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kat Minor Portfolio Drift</title>
-    <link rel="stylesheet" type="text/css" href="../projectpage.css">
+    <link rel="stylesheet" type="text/css" href="../projectPage.css">
     <link rel="stylesheet" type="text/css" href="../../navbar-footer.css">
+    <link rel="stylesheet" type="text/css" href="../headerImage.css">
     <link rel="stylesheet" type="text/css" href="../../margin.css">
     <link rel="stylesheet" type="text/css" href="../islands.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="../../left-right-animations.js"></script>
-    <script src="../projectpage.js"></script>
     <script src="../change-image.js"></script>
+    <script src="../../navbar-footer.js"></script>
     <script src="../islands.js"></script>
 </head>
 
 <body>
+    <div class="full-nav">
+        <div class="nav-options-container">
+            <div>
+                <h2><a href="../MLB/mlb.html" class="secondary">mlb</a></h2>
+                <h2><a href="../Whats Cooking/WhatsCooking.html" class="secondary">what's cooking?</a></h2>
+                <h2><a href="../Grapevine/grapevine.html" class="secondary">grapevine</a></h2>
+                <h2><a href="../Drift/drift.html" class="secondary">drift</a></h2>
+            </div>
+            <img class="divider-decoration-nav" src="../../Pictures/Abstract/Star.svg">
+            <div>
+                <h2><a href="../../Other Pages/about.html" class="secondary">about</a></h2>
+                <h2><a href="../../Other Pages/work.html" class="secondary">work</a></h2>
+            </div>
+        </div>
+    </div>
     <div id="navbar">
         <nav class="navbar">
             <div class="navbar-left">
@@ -32,29 +48,27 @@
                     <li><a href="../../Other Pages/about.html" class="primary">about</a></li>
                     <li><a href="../../Other Pages/work.html" class="primary">work</a></li>
                     <img id="hamburger" src="../../Pictures/Navbar/Menu.svg" alt="Menu Navbar">
+                    <img id="exit" src="../../Pictures/Navbar/Exit.svg" alt="Exit">
                 </ul>
             </div>
         </nav>
     </div>
-    <div id="header-image">
-        <div class="margin animate">
-            <div class="margin">
-                <div class="margin">
-                    <div class="row">
-                        <div class="img-container">
-                            <img class="screen"
-                                src="../../Pictures/Drift/Screens/Mobile Messaging/Add Saved Reply Fill.png"
-                                alt="Drift Add Saved Reply Screen">
-                        </div>
-                        <div class="img-container">
-                            <img class="screen" src="../../Pictures/Drift/Screens/Gifs/ChatLog.gif"
-                                alt="Drift Conversation Screen">
-                        </div>
-                        <div class="img-container">
-                            <img class="screen" src="../../Pictures/Drift/Screens/Mobile Messaging/Actions Bar.png"
-                                alt="Drift Conversation Actions Bar">
-                        </div>
-                    </div>
+    <div class="header-image first">
+        <div>
+            <div class="header-row drift">
+                <div class="header-column" style="margin-top: -160px;">
+                    <img src="../../Pictures/Drift/Screens/Feed Cards/Feed Card.png" class="header-feed-card header-top" alt="Feed card">
+                    <img src="../../Pictures/Drift/Screens/Feed Cards/New Account Card.png" class="header-feed-card header-bottom"
+                        alt="Feed card expanded">
+                        <img src="../../Pictures/Drift/Screens/Feed Cards/Feed Card.png" class="header-feed-card header-top" alt="Feed card">
+                </div>
+                <div class="header-alignment-margin-drift-2 header-column">
+                    <img src="../../Pictures/Drift/Screens/Gifs/Account.gif" class="header-screen-drift" alt="Drift mobile account gif">
+                    <img src="../../Pictures/Drift/Screens/Mobile Messaging/Mark CQL.png" class="header-screen-drift" alt="Sending photos through drift mobile">
+                </div>
+                <div class="header-column header-alignment-margin-drift">
+                    <img src="../../Pictures/Drift/Screens/Mobile Messaging/Send Photo 2.png" class="header-screen-drift" alt="Drift mobile account gif">
+                    <img src="../../Pictures/Drift/Screens/Mobile Messaging/OptionsMenu.png" class="header-screen-drift" alt="Drift mobile send video">
                 </div>
             </div>
         </div>
@@ -185,8 +199,8 @@
         </div>
         <div class="row block centered animate">
             <div class="text-with-image">
-                <h2>3. Streamline your workflow using <strong></strong></h2>
-                <p>Every single day, hundreds of thousands of  are used on Drift Desktop. Yet, this
+                <h2>3. Streamline your workflow using <strong>slash commands</strong></h2>
+                <p>Every single day, hundreds of thousands of slash commands are used on Drift Desktop. Yet, this
                     functionality is not available on Drift Mobile. This feature helps users quickly access
                     key information. Without it, the process of making a sale is much slower. In order to prevent
                     this issue, I added this functionality to Drift Mobile.</p>
@@ -638,7 +652,7 @@
                     </div>
                     <div class="multi-screen-container one">
                         <div class="img-container">
-                            <img class="screen" src="../../Pictures/Drift/Screens/Gifs/SlashCommand.gif">
+                            <img class="screen" src="../../Pictures/Drift/Screens/gifs/SlashCommand.gif">
                             <p>Slash Commands</h2>
                         </div>
                     </div>
