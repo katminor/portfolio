@@ -10,10 +10,27 @@
     <script src="script.js"></script>
     <script src="left-right-animations.js"></script>
     <script src="PreviewImages/HomeSection.js"></script>
+    <script src="PortfolioTracker.js"></script>
+    <script src="navbar-footer.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="full-nav">
+        <div class="nav-options-container">
+            <div>
+                <h2><a href="Project Pages/MLB/mlb.html" class="secondary">mlb</a></h2>
+                <h2><a href="Project Pages/Whats Cooking/WhatsCooking.html" class="secondary">what's cooking?</a></h2>
+                <h2><a href="Project Pages/Grapevine/grapevine.html" class="secondary">grapevine</a></h2>
+                <h2><a href="Project Pages/Drift/drift.html" class="secondary">drift</a></h2>
+            </div>
+            <img class="divider-decoration-nav" src="Pictures/Abstract/Star.svg">
+            <div>
+                <h2><a href="Other Pages/about.html" class="secondary">about</a></h2>
+                <h2><a href="Other Pages/work.html" class="secondary">work</a></h2>
+            </div>
+        </div>
+    </div>
     <div id="navbar">
         <nav class="navbar">
             <div class="navbar-left">
@@ -29,6 +46,7 @@
                     <li><a href="Other Pages/about.html" class="primary">about</a></li>
                     <li><a href="Other Pages/work.html" class="primary">work</a></li>
                     <img id="hamburger" src="Pictures/Navbar/Menu.svg" alt="Menu Navbar">
+                    <img id="exit" src="Pictures/Navbar/Exit.svg" alt="Menu Navbar">
                 </ul>
             </div>
         </nav>
@@ -41,68 +59,96 @@
         <p>selected work</p>
         <hr>
     </div>
-    <a href="Project Pages/MLB/mlb.html" class="project-option animate" id="mlb">
-        <iframe class="preview-image" src="PreviewImages/MLB/MLBPreview.html" frameborder="0" scrolling="no"></iframe>
-        <div class="description-container">
-            <div class="project-title-container">
-                <p class="title"><strong>MLB The Show</strong></p>
-                <img class="divider-decoration" src="Pictures/Abstract/Star.svg">
-                <p class="type">Game UI</p>
+    <div id="all-projects">
+        <a href="Project Pages/MLB/mlb.html" class="project-option animate" id="mlb">
+            <iframe class="preview-image" src="PreviewImages/MLB/MLBPreview.html" frameborder="0"
+                scrolling="no"></iframe>
+            <div class="description-container">
+                <div class="project-title-container">
+                    <p class="title"><strong>MLB The Show</strong></p>
+                    <img class="divider-decoration" src="Pictures/Abstract/Star.svg">
+                    <p class="type">Game UI</p>
+                </div>
+                <p class="project-description">Menus and settings are important, but too much can overwhelm players.
+                    <strong>How can we make these screens more streamlined?</strong>
+                </p>
+                <button>let's go</button>
             </div>
-            <p class="project-description">Menus and settings are important, but too much can overwhelm players. 
-                <strong>How can we make these screens more streamlined?</strong></p>
-            <button>let's go</button>
+        </a>
+        <div class="work-divider">
+            <hr>
+            <img class="star" src="Pictures/Abstract/Star.svg">
         </div>
-    </a>
-    <div class="work-divider">
-        <hr>
-        <img class="star" src="Pictures/Abstract/Star.svg">
+        <a href="Project Pages/Whats Cooking/WhatsCooking.html" class="project-option animate right">
+            <div class="description-container">
+                <div class="project-title-container">
+                    <p class="title"><strong>What's Cooking?</strong></p>
+                    <img class="divider-decoration" src="Pictures/Abstract/Star.svg">
+                    <p class="type">Game UI</p>
+                </div>
+                <p class="project-description">How do you explain making burgers to an AI? <strong>What does efficient
+                        in-game communication between humans and AI look like?</strong></p>
+                <button>let's go</button>
+            </div>
+            <iframe class="preview-image" src="PreviewImages/What's Cooking/What'sCookingPreview.html"
+                data-href="Project Pages/Whats Cooking/WhatsCooking.html" frameborder="0" scrolling="no"></iframe>
+        </a>
+        <div class="work-divider">
+            <hr>
+            <img class="star" src="Pictures/Abstract/Star.svg">
+        </div>
+        <a href="Project Pages/Grapevine/grapevine.html" class="project-option animate">
+            <iframe class="preview-image" src="PreviewImages/Grapevine/GrapevinePreview.html"
+                data-href="Project Pages/Grapevine/grapevine.html" frameborder="0" scrolling="no"></iframe>
+            <div class="description-container">
+                <div class="project-title-container">
+                    <p class="title"><strong>Grapevine</strong></p>
+                    <img class="divider-decoration" src="Pictures/Abstract/Star.svg">
+                    <p class="type">App Design</p>
+                </div>
+                <p class="project-description">Being lonely is actually dangerous! <strong>How can we help older
+                        romantics feel safer finding love online?</strong></p>
+                <button>let's go</button>
+            </div>
+        </a>
+        <div class="work-divider">
+            <hr>
+            <img class="star" src="Pictures/Abstract/Star.svg">
+        </div>
+        <a href="Project Pages/Drift/drift.html" class="project-option animate right">
+            <div class="description-container">
+                <div class="project-title-container">
+                    <p class="title"><strong>Drift Mobile</strong></p>
+                    <img class="divider-decoration" src="Pictures/Abstract/Star.svg">
+                    <p class="type">App Design</p>
+                </div>
+                <p class="project-description">Not everyone wants to be stuck in front of a screen all day. <strong>How
+                        can we make selling via mobile easier?</strong></p>
+                <button>let's go</button>
+            </div>
+            <iframe class="preview-image" src="PreviewImages/Drift/DriftPreview.html"
+                data-href="Project Pages/Drift/drift.html" frameborder="0" scrolling="no"></iframe>
+        </a>
     </div>
-    <a href="Project Pages/Whats Cooking/WhatsCooking.html" class="project-option animate right">
-        <div class="description-container">
-            <div class="project-title-container">
-                <p class="title"><strong>What's Cooking?</strong></p>
-                <img class="divider-decoration" src="Pictures/Abstract/Star.svg">
-                <p class="type">Game UI</p>
-            </div>
-            <p class="project-description">How do you explain making burgers to an AI? <strong>What does efficient in-game communication between humans and AI look like?</strong></p>
-            <button>let's go</button>
-        </div>
-        <iframe class="preview-image" src="PreviewImages/What's Cooking/What'sCookingPreview.html" data-href="Project Pages/Whats Cooking/WhatsCooking.html" frameborder="0" scrolling="no"></iframe>
-    </a>
-    <div class="work-divider">
-        <hr>
-        <img class="star" src="Pictures/Abstract/Star.svg">
-    </div>
-    <a href="Project Pages/Grapevine/grapevine.html" class="project-option animate">
-        <iframe class="preview-image" src="PreviewImages/Grapevine/GrapevinePreview.html" data-href="Project Pages/Grapevine/grapevine.html" frameborder="0" scrolling="no"></iframe>
-        <div class="description-container">
-            <div class="project-title-container">
-                <p class="title"><strong>Grapevine</strong></p>
-                <img class="divider-decoration" src="Pictures/Abstract/Star.svg">
-                <p class="type">App Design</p>
-            </div>
-            <p class="project-description">Being lonely is actually dangerous! <strong>How can we help older romantics feel safer finding love online?</strong></p>
-            <button>let's go</button>
-        </div>
-    </a>
-    <div class="work-divider">
-        <hr>
-        <img class="star" src="Pictures/Abstract/Star.svg">
-    </div>
-    <a href="Project Pages/Drift/drift.html" class="project-option animate right">
-        <div class="description-container">
-            <div class="project-title-container">
-                <p class="title"><strong>Drift Mobile</strong></p>
-                <img class="divider-decoration" src="Pictures/Abstract/Star.svg">
-                <p class="type">App Design</p>
-            </div>
-            <p class="project-description">Not everyone wants to be stuck in front of a screen all day. <strong>How can we make selling via mobile easier?</strong></p>
-            <button>let's go</button>
-        </div>
-        <iframe class="preview-image" src="PreviewImages/Drift/DriftPreview.html" data-href="Project Pages/Drift/drift.html" frameborder="0" scrolling="no"></iframe>
-    </a>
     <hr class="final-divider">
+    <form class="invisible">
+        <label>
+            <input type="radio" name="ver" value="ver1" onclick="changeLayout('ver1')">
+            Option 1
+        </label><br>
+        <label>
+            <input type="radio" name="ver" value="ver2" onclick="changeLayout('ver2')">
+            Option 2
+        </label><br>
+        <label>
+            <input type="radio" name="ver" value="ver3" onclick="changeLayout('ver3')">
+            Option 3
+        </label><br>
+        <label>
+            <input type="radio" name="ver" value="ver4" onclick="changeLayout('ver4')">
+            Option 4
+        </label><br>
+    </form>
     <div id="footer">
         <div class="footer">
             <p id="thanks">Thanks for stopping by!</p>

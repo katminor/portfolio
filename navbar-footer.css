@@ -18,6 +18,27 @@ body {
     overflow-x: hidden;
 }
 
+.first {
+    padding-top: 80px;
+}
+
+.preview-image.first {
+    padding-top: 160px;
+}
+
+.first-nav {
+    padding-top: 160px;
+}
+
+.divider-decoration-nav {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 16px;
+    vertical-align: middle;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
 /* Navbar 
 -------------------
 -------------------
@@ -93,9 +114,14 @@ padding: 0px;
     align-items: center;
 }
 
-#hamburger {
+#hamburger, #exit{
     display:none;
-    transition: width .25s ease-in-out, height .25s ease-in-out;
+    cursor: pointer;
+    transition: width .25s ease-in-out, height .25s ease-in-out, transform .25s ease-in-out;
+}
+
+#hamburger:hover #exit:hover{
+    transform: scale(1.2);
 }
 
 .primary {
@@ -191,10 +217,13 @@ padding: 0px;
         display: none;
     }
 
-    #hamburger {
-        display:inline-block;
+    #hamburger, #exit{
         width: 28px;
         height: 28px;
+    }
+
+    #hamburger {
+        display: inline-block;
     }
 }
 
@@ -221,10 +250,17 @@ padding: 0px;
         display: none;
     }
     
-    #hamburger {
-        display:inline-block;
+    #hamburger, #exit{
         width: 24px;
         height: 24px;
+    }
+
+    .first {
+        padding-top: 72px;
+    }
+
+    .preview-image.first {
+        padding-top: 144px;
     }
 }
 
@@ -249,10 +285,17 @@ padding: 0px;
         display: none;
     }
 
-    #hamburger {
-        display:inline-block;
+    #hamburger, #exit{
         width: 20px;
         height: 20px;
+    }
+
+    .first {
+        padding-top: 68px;
+    }
+
+    .preview-image.first {
+        padding-top: 132px;
     }
 }
 
@@ -277,10 +320,17 @@ padding: 0px;
         display: none;
     }
 
-    #hamburger {
-        display:inline-block;
+    #hamburger, #exit{
         width: 16px;
         height: 16px;
+    }
+
+    .first {
+        padding-top: 56px;
+    }
+
+    .preview-image.first {
+        padding-top: 112px;
     }
 }
 
@@ -305,8 +355,7 @@ padding: 0px;
         display: none;
     }
 
-    #hamburger {
-        display:inline-block;
+    #hamburger, #exit{
         width: 12px;
         height: 12px;
     }
@@ -377,6 +426,31 @@ a {
     font-size: 18px;
     margin-bottom: 0px;
 }
+
+/* Hamburger Open */
+
+.full-nav {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+}
+
+.nav-options-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 
 
 @media (max-width: 1200px) {

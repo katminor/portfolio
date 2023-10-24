@@ -27,6 +27,15 @@ border: none;
     z-index: 0;
 }
 
+#all-projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.invisible {
+    display: none;
+}
+
 .project-option {
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
@@ -47,6 +56,15 @@ border: none;
 
 .project-option.right {
     transform: translateX(5%);
+}
+
+.divider-decoration {
+    width: 16px;
+    height: 16px;
+    padding-bottom: 3px;
+    vertical-align: middle;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .project-option.active {
@@ -148,15 +166,6 @@ border: none;
     white-space: nowrap;
     max-width: fit-content; 
     display: inline;
-}
-
-.divider-decoration {
-    width: 16px;
-    height: 16px;
-    padding-bottom: 3px;
-    vertical-align: middle;
-    margin-left: 8px;
-    margin-right: 8px;
 }
 
 .project-description {

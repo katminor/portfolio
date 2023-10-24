@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // JavaScript to observe when the element is in the viewport
     const threshold = {
-        threshold: .3, // Adjust this value to control when the transition starts
+        threshold: .15, // Adjust this value to control when the transition starts
     };
 
     const observer = new IntersectionObserver((entries) => {
