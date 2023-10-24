@@ -7,15 +7,31 @@
     <title>Kat Minor Portfolio</title>
     <link rel="stylesheet" type="text/css" href="../projectPage.css">
     <link rel="stylesheet" type="text/css" href="../../navbar-footer.css">
+    <link rel="stylesheet" type="text/css" href="../headerImage.css">
     <link rel="stylesheet" type="text/css" href="../../margin.css">
     <link rel="stylesheet" type="text/css" href="../islands.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="../../left-right-animations.js"></script>
-    <script src="../projectpage.js"></script>
+    <script src="../../navbar-footer.js"></script>
     <script src="../islands.js"></script>
 </head>
 
 <body>
+    <div class="full-nav">
+        <div class="nav-options-container">
+            <div>
+                <h2><a href="../MLB/mlb.html" class="secondary">mlb</a></h2>
+                <h2><a href="../Whats Cooking/WhatsCooking.html" class="secondary">what's cooking?</a></h2>
+                <h2><a href="../Grapevine/grapevine.html" class="secondary">grapevine</a></h2>
+                <h2><a href="../Drift/drift.html" class="secondary">drift</a></h2>
+            </div>
+            <img class="divider-decoration-nav" src="../../Pictures/Abstract/Star.svg">
+            <div>
+                <h2><a href="../../Other Pages/about.html" class="secondary">about</a></h2>
+                <h2><a href="../../Other Pages/work.html" class="secondary">work</a></h2>
+            </div>
+        </div>
+    </div>
     <div id="navbar">
         <nav class="navbar">
             <div class="navbar-left">
@@ -31,34 +47,52 @@
                     <li><a href="../../Other Pages/about.html" class="primary">about</a></li>
                     <li><a href="../../Other Pages/work.html" class="primary">work</a></li>
                     <img id="hamburger" src="../../Pictures/Navbar/Menu.svg" alt="Menu Navbar">
+                    <img id="exit" src="../../Pictures/Navbar/Exit.svg" alt="Exit">
                 </ul>
             </div>
         </nav>
     </div>
-    <div id="header-image">
-        <div class="margin animate">
-            <div class="margin">
-                <div class="margin">
-                    <div class="row">
-                        <div class="img-container">
-                            <img class="screen"
-                                src="../../Pictures/Drift/Screens/Mobile Messaging/Add Saved Reply Fill.png"
-                                alt="Drift Add Saved Reply Screen">
+    <div class="header-image first">
+        <div>
+            <div class="header-row mlb">
+                <div class="header-row header-horizontal-aligned">
+                    <div class="header-column header-alignment-margin-mlb">
+                        <img src="../../Pictures/MLB/Menu/GameStart/Start – 2.png" class="header-screen-mlb"
+                            alt="Screen Image">
+                        <img src="../../Pictures/MLB/Banners/Artsy 7.png" class="header-banner" alt="Banner Image">
+                        <img src="../../Pictures/MLB/Menu/Gifs/GamesEdited.gif" class="header-screen-mlb"
+                            alt="Screen Image">
+                        <div class="header-row-no-gap header-right-aligned header-top-aligned header-justify">
+                            <div class="header-column">
+                                <img src="../../Pictures/MLB/Icons/Mascot Icon Philidelphia.png" class="header-icon"
+                                alt="Icon Image">
+                            <img src="../../Pictures/MLB/Icons/Mascot Icon Cleveland.png" class="header-icon"
+                                alt="Icon Image">
+                            </div>
+                            <div class="header-column">
+                                <img src="../../Pictures/MLB/Icons/Wash Icon Abstract.png" class="header-icon"
+                                alt="Icon Image">
+                            <img src="../../Pictures/MLB/Icons/Baltimore Icon Abstract.png" class="header-icon"
+                                alt="Icon Image">
+                            </div>
+                            <img src="../../Pictures/MLB/Cards/Finest 8_A.png" class="header-card" alt="Card Image">
                         </div>
-                        <div class="img-container">
-                            <img class="screen" src="../../Pictures/Drift/Screens/Gifs/ChatLog.gif"
-                                alt="Drift Conversation Screen">
-                        </div>
-                        <div class="img-container">
-                            <img class="screen" src="../../Pictures/Drift/Screens/Mobile Messaging/Actions Bar.png"
-                                alt="Drift Conversation Actions Bar">
+                    </div>
+                    <div class="header-column">
+                        <div class="header-cards">
+                            <img src="../../Pictures/MLB/Cards/Finest 8_B.jpg" class="header-card" alt="Card Image">
+                            <img src="../../Pictures/MLB/Cards/Finest 1_A.png" class="header-card" alt="Card Image">
+                            <img src="../../Pictures/MLB/Cards/Draft 1_B.jpg" class="header-card" alt="Card Image">
+                            <img src="../../Pictures/MLB/Cards/Finest 10_A.png" class="header-card" alt="Card Image">
+                            <img src="../../Pictures/MLB/Menu/Gifs/Settings.gif" class="header-screen-mlb"
+                                alt="Screen Image">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="margin">
+    <div class="margin" id="cards">
         <div id="intro">
             <div id="intro-text" class="row block animate">
                 <div class="seventy-five description-container">
@@ -69,21 +103,14 @@
                         <hr>
                     </div>
                     <h1>MLB The Show</h1>
-                    <h2 class="gray">Helping sales teams make sales from anywhere<br><br></h2>
-                    <p><strong>What is Drift?</strong><br>
-                        Drift, a B2B company, facilitates connections between
-                        businesses and prospective customers when their intent to buy is at its highest. By linking
-                        Sales Representatives with visitors when they're exploring pricing options and offering
-                        insights into their browsing behavior, Drift enables personalized sales. This approach
-                        leads to quicker and more effective sales.
-                        <br><br>
-                        <strong>What did I do?</strong><br>
-                    <p>To address low Drift Mobile usage, I conducted
-                        extensive user research and created a fully functional prototype in Figma.
-                        Through 12 in-depth interviews, I identified missing features that prevented more widespread
-                        Drift Mobile
-                        adoption. <span class="highlight">My insights drove increased usage, enabling sales teams to
-                            engage high-intent customers.</span></p>
+                    <h2 class="gray">A major league game for major fans<br><br></h2>
+                    <p><br>
+                        During the summer of 2020, I had the opportunity to work for Sony Interactive Entertainment on
+                        MLB The Show. As a User Interface Artist, I created baseball card concepts, icons,
+                        player nameplates, and interface animations. My goal while creating each was to create a
+                        cohesive user experience with fun and comprehensive visuals. During my time working on the game,
+                        I learned a lot about utilizing motion graphics to make menus feel more succinct so players can
+                        get back to the game faster.
                     </p>
                 </div>
                 <div class="twenty-five" id="stats">
@@ -95,7 +122,7 @@
                     </div>
                     <div class="stat">
                         <h3>My Role</h3>
-                        <p>Product Designer</p>
+                        <p>User Interface Artist Intern (Contract)</p>
                     </div>
                     <div class="stat">
                         <h3>Timeline</h3>
@@ -103,33 +130,279 @@
                     </div>
                     <div class="stat">
                         <h3>The Team</h3>
-                        <p>Taylor Wagner — Manager <br><br>
-                            Shelton Miller — Product Manager <br><br>
-                            Ahmad Alhayek — Mobile Software Engineer </p>
+                        <p>Adam Hamil — Production Assistant <br><br>
+                            Christina Liu - Lead Senior Interface Artist</p>
                     </div>
                 </div>
             </div>
-            <div id="in-summary" class="block animate right">
-                <div class="project-divider">
-                    <div class="divider-text row">
-                        <h4>In Summary</h4>
+        </div>
+    </div>
+    <div class="margin">
+        <div class="project-divider">
+            <div class="divider-text row">
+                <h4>Card Concepts</h4>
+            </div>
+            <hr>
+        </div>
+        <div>
+            <div class="card-holder block centered">
+                <h2 class="space-around animate" style="justify-content:left; display: flex;">2020 Finest Series
+                    Concepts</h2>
+                <div class="card-row level-seven-hundred-column card-gap space-around">
+                    <div class="card-column level-seven-hundred-double-row card-gap outside-cards">
+                        <div class="card-container animate">
+                            <img src="../../Pictures/MLB/Cards/Finest 10_A.png" alt="Card Image">
+                        </div>
+                        <div class="card-container animate">
+                            <img src="../../Pictures/MLB/Cards/Finest 1_B.png" alt="Card Image">
+                        </div>
                     </div>
-                    <hr>
+                    <div class="card-column level-seven-hundred-double-row card-gap outside-cards">
+                        <div class="card-container animate">
+                            <img src="../../Pictures/MLB/Cards/Finest 8_B.jpg" alt="Card Image">
+                        </div>
+                        <div class="card-container animate">
+                            <img src="../../Pictures/MLB/Cards/Finest 1_A.png" alt="Card Image">
+                        </div>
+                    </div>
+                    <div class="card-column level-seven-hundred-double-row card-gap outside-cards">
+                        <div class="card-container inside-cards animate">
+                            <img src="../../Pictures/MLB/Cards/Finest 8_A.png" alt="Card Image">
+                        </div>
+                        <div class="card-column level-seven-hundred-double-row inside-cards">
+                            <div class="card-row level-seven-hundred-column inside card-gap">
+                                <div class="card-container animate">
+                                    <img src="../../Pictures/MLB/Cards/Finest 6_A.png" alt="Card Image">
+                                </div>
+                                <div class="card-container animate">
+                                    <img src="../../Pictures/MLB/Cards/Finest 12_A.png" alt="Card Image">
+                                </div>
+                            </div>
+                            <div class="card-row level-seven-hundred-column inside card-gap">
+                                <div class="card-container animate">
+                                    <img src="../../Pictures/MLB/Cards/Finest 11_A.png" alt="Card Image">
+                                </div>
+                                <div class="card-container animate">
+                                    <img src="../../Pictures/MLB/Cards/Finest 7_A.jpg" alt="Card Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row evenly-spaced">
-                    <div class="stat">
-                        <h3>The Problem</h3>
-                        <p>The Drift Mobile app lacked essential functionalities expected by sales associates. Sales
-                            opportunities can arise at any moment, even while waiting in line at
-                            the grocery store. Without the features available to them on desktop, sales teams have a
-                            harder time addressing customer needs.</p>
+                <div class="column space-around section animate">
+                    <p class="text-container">The MLB The Show games feature unlockable baseball cards, unlocking these
+                        cards is intended to be special and exciting, so my goal was to make each of these cards unique
+                        from other pre-existing ones. I created numerous card concepts for the MLB The Show 2020 Finest
+                        series, showcasing players who are considered the best. Each card includes the player's name,
+                        position, team, and a diamond in the top right. The top left Finest concept was chosen for 2020.
+                    </p>
+                    <p class="gray" style="justify-content:left; display: flex; margin-top: 16px">Diamond and player
+                        photos provided.</p>
+                </div>
+            </div>
+            <div class="card-holder block centered">
+                <h2 class="space-around animate" style="justify-content:left; display: flex;">2020 Draft Series Concept
+                </h2>
+                <div class="card-row card-gap space-around">
+                    <div class="card-column card-gap outside-cards">
+                        <div class="card-container animate">
+                            <img src="../../Pictures/MLB/Cards/Draft 1_A.jpg" alt="Card Image">
+                        </div>
                     </div>
-                    <div class="stat">
-                        <h3>My Solution</h3>
-                        <p>I determined that core functionalities, such as slash commands and saved replies, were
-                            missing. I created a fully functional prototype to how these features could be optimized for
-                            mobile.</p>
+                    <div class="card-column card-gap outside-cards">
+                        <div class="card-container animate">
+                            <img src="../../Pictures/MLB/Cards/Draft 1_B.jpg" alt="Card Image">
+                        </div>
                     </div>
+                    <div class="card-column card-gap outside-cards">
+                        <div class="card-container animate">
+                            <img src="../../Pictures/MLB/Cards/Draft 1_C.jpg" alt="Card Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="column space-around section animate">
+                    <p class="text-container">Beyond the Finest Series, there are a variety of other packs such as the Draft Series, which
+                        I also had the opportunity to work on. These cards have the same requirements as the Finest
+                        series but their Draft pick number must also be included on the card. I wanted to ensure that
+                        these cards truly stood out and celebrated the significance of being a draft pick. To achieve
+                        this, I made the draft pick number the primary design aspect of the card, interweaving it with the
+                        player's photo.</p>
+                    <p class="gray" style="justify-content:left; display: flex; margin-top: 16px">Diamond and player
+                        photos provided.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="prototype" class="margin">
+        <div class="animate">
+            <div class="project-divider">
+                <div class="divider-text row">
+                    <h4>Game Menu Prototype</h4>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate">Prototype Video</h2>
+                <video class="video full-width animate" controls autoplay muted>
+                    <source src="../../Pictures/MLB/Menu/GameStart/MLBGameMenuVideo.mp4" type="video/mp4">
+                </video>
+                <div class="column space-around section animate">
+                    <p class="text-container">My goal was to create an engaging main menu prototype.
+                        This
+                        involved designing a navigation system which could access multiple game modes, an extensive
+                        settings
+                        menu, and documenting the components I make within the design system for others' use. I
+                        transformed
+                        a Lo-Fi prototype into a polished interface, prioritizing speed. This was momentum was crucial
+                        to
+                        maintain a feeling of momentum as this prevents players from feeling overwhelmed by menus.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate">Main Menu</h2>
+                <img src="../../Pictures/MLB/Menu/Gifs/Main Menu.gif" class="full-width animate">
+                <div class="column space-around section animate">
+                    <p class="text-container">Because the landing page is the first thing players see before they start the game, I wanted to create a fun and colorful aesthetic to set the tone. As well, to make it easier to see where they are on the screen, elements enlarge to show what is being interacted with.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate">Game Modes</h2>
+                <img src="../../Pictures/MLB/Menu/Gifs/GamesEdited.gif" class="full-width animate">
+                <div class="column space-around section animate">
+                    <p class="text-container">To amplify the sense of momentum, elements will move away from the player
+                        as they navigate through screens with lots of elements. This creates the perception of increased
+                        speed. This is especially noticeable on the game modes screen due to its grid layout.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate">Settings</h2>
+                <img src="../../Pictures/MLB/Menu/Gifs/SettingsEdited.gif" class="full-width animate">
+                <div class="column space-around section animate">
+                    <p class="text-container">Players also have hundreds of options that they can toggle and change to
+                        make the game more to their liking. Similar to the game modes screen, the buttons move the
+                        opposite direciton of the player to help players believe they are moving faster than they are.
+                        Due to the enormous amount of options, this helps to reduce player frustration.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin centered column" id="nameplates-icons-profiles">
+        <div class="animate full-width">
+            <div class="project-divider">
+                <div class="divider-text row">
+                    <h4>Nameplates, Profiles, & Icons</h4>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="section space-around">
+            <h2 class="animate">Mascot Nameplates & Profile Pictures</h2>
+            <div class="card-holder card-gap">
+                <img class="full-width animate" src="../../Pictures/MLB/Banners/Mascot Nameplate Texas.png">
+                <img class="full-width animate" src="../../Pictures/MLB/Banners/Mascot Nameplate Boston.png">
+                <img class="full-width animate" src="../../Pictures/MLB/Banners/Mascot Nameplate Cincinatti.png">
+                <div class="card-row card-gap animate">
+                    <div class="card-container">
+                        <img src="../../Pictures/MLB/Icons/Mascot Icon Atlanta.png">
+                    </div>
+                    <div class="card-container">
+                        <img src="../../Pictures/MLB/Icons/Mascot Icon Cleveland.png">
+                    </div>
+                    <div class="card-container">
+                        <img src="../../Pictures/MLB/Icons/Mascot Icon Philidelphia.png">
+                    </div>
+                </div>
+            </div>
+            <div class="column section animate">
+                <p class="text-container">Players can customize their profiles with nameplates and profile pictures. I created these options wiht mascots. I did little doodles on them to amplify the whimsical and fun feeling of the mascots.</p>
+                <p class="gray" style="justify-content:left; display: flex; margin-top: 16px">Mascot photos provided.</p>
+            </div>
+        </div>
+        <div class="section space-around">
+            <h2 class="animate">Wavy Nameplates & Profile Pictures</h2>
+            <div class="card-holder card-gap">
+                <img class="full-width animate" src="../../Pictures/MLB/Banners/Mariners Abstract.png">
+                <img class="full-width animate" src="../../Pictures/MLB/Banners/METS Abstract.png">
+                <img class="full-width animate" src="../../Pictures/MLB/Banners/Arizona Abstract.png">
+                <div class="card-row card-gap animate">
+                    <div class="card-container">
+                        <img src="../../Pictures/MLB/Icons/Wash Icon Abstract.png">
+                    </div>
+                    <div class="card-container">
+                        <img src="../../Pictures/MLB/Icons/Baltimore Icon Abstract.png">
+                    </div>
+                    <div class="card-container">
+                        <img src="../../Pictures/MLB/Icons/Miami Icon Abstract.png">
+                    </div>
+                </div>
+            </div>
+            <div class="column section animate">
+                <p class="text-container">
+                    Another option which I created are the wavy nameplates and profile pictures. These include the team colors and the logos. This is an option for fans who want something that shows off their favorite team's colors and logo. </p>
+                <p class="gray" style="justify-content:left; display: flex; margin-top: 16px">Team logos provided.</p>
+            </div>
+        </div>
+        <div class="section space-around">
+            <h2 class="animate">Artsy nameplates-icons-profiles `</h2>
+            <div class="card-holder card-gap">
+                <img class="full-width animate" src="../../Pictures/MLB/Banners/Artsy 2.png">
+                <img class="full-width animate" src="../../Pictures/MLB/Banners/Artsy 7.png">
+                <img class="full-width animate" src="../../Pictures/MLB/Banners/Artsy 6.png">
+                <img class="full-width animate" src="../../Pictures/MLB/Banners/Artsy 1.png">
+                <img class="full-width animate" src="../../Pictures/MLB/Banners/Artsy 4.png">
+                <img class="full-width animate" src="../../Pictures/MLB/Banners/Artsy 3.png">
+            </div>
+            <div class="column section animate">
+                <p class="text-container">
+                    Aside from the team-related nameplates, I also created a series of nameplates for players who prefer not to have a team logo on their profile. I wanted to cater to the wide variety of player preferences and provide them with a range of creative options to express themselves.</p>
+            </div>
+        </div>
+        <div class="section space-around">
+            <div class="card-holder">
+                <h2 class="animate" style="justify-content:left; display: flex;">Award Badges
+                </h2>
+                <div class="card-row animate">
+                    <div class="no-shadow card-container">
+                        <img src="../../Pictures/MLB/Icons/Concept 6 Gold.png" alt="Gold Medal">
+                    </div>
+                    <div class="card-container animate no-shadow">
+                        <img src="../../Pictures/MLB/Icons/Concept 6 Silver.png" alt="Silver Medal">
+                    </div>
+                    <div class="card-container animate no-shadow">
+                        <img src="../../Pictures/MLB/Icons/Concept 6 Bronze.png" alt="Bronze Medal">
+                    </div>
+                    <div class="card-container animate no-shadow">
+                        <img src="../../Pictures/MLB/Icons/Concept 6 None.png" alt="None Medal">
+                    </div>
+                </div>
+                <div class="column space-around section animate">
+                    <p class="text-container">As well, I created a series of non-team related nameplates and profile pictures for fans who did not want any specific team on their profile.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section space-around">
+            <div class="card-holder">
+                <h2 class="animate" style="justify-content:left; display: flex;">Pack Art
+                </h2>
+                <div class="card-row animate">
+                    <div class="no-shadow card-container">
+                        <img src="../../Pictures/MLB/CardPack/image (6).png" alt="Beach Ball Pack Art Full">
+                    </div>
+                    <div class="card-container animate no-shadow">
+                        <img src="../../Pictures/MLB/CardPack/Beach Ball Pack.webp" alt="Beach Ball Pack Art">
+                    </div>
+                </div>
+                <div class="column space-around section animate">
+                    <p class="text-container">I also created pack art for that summer's Beach Ball pack. I decided to do a beach ball at the beach because I wanted to remind everyone of summer. Players buy these packs to unlock cards.</p>
+                    <p class="gray" style="justify-content:left; display: flex; margin-top: 16px">Pack display provided</p>
                 </div>
             </div>
         </div>
@@ -142,11 +415,13 @@
                 <h2>Drift</h2>
             </div>
             <div class="column island centered">
-                <img class="island-image" data-href="../Grapevine/grapevine.html" src="../../Pictures/Islands/Grapevine.png">
+                <img class="island-image" data-href="../Grapevine/grapevine.html"
+                    src="../../Pictures/Islands/Grapevine.png">
                 <h2>Grapevine</h2>
             </div>
             <div class="column island centered">
-                <img class="island-image" data-href="../Whats Cooking/WhatsCooking.html" src="../../Pictures/Islands/What's Cooking.png">
+                <img class="island-image" data-href="../Whats Cooking/WhatsCooking.html"
+                    src="../../Pictures/Islands/What's Cooking.png">
                 <h2>What's Cooking</h2>
             </div>
         </div>
