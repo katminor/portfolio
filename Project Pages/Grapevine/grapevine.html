@@ -5,17 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kat Minor Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="../projectpage.css">
+    <link rel="stylesheet" type="text/css" href="../projectPage.css">
+    <link rel="stylesheet" type="text/css" href="../headerImage.css">
     <link rel="stylesheet" type="text/css" href="../../navbar-footer.css">
     <link rel="stylesheet" type="text/css" href="../../margin.css">
     <link rel="stylesheet" type="text/css" href="../islands.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="../../left-right-animations.js"></script>
-    <script src="../projectpage.js"></script>
+    <script src="../../navbar-footer.js"></script>
     <script src="../islands.js"></script>
+
+    <!--Carousel-->
+    <link rel="stylesheet" href="../carousel.css">
+    <script src="../carousel.js"></script>
 </head>
 
 <body>
+    <div class="full-nav">
+        <div class="nav-options-container">
+            <div>
+                <h2><a href="../MLB/mlb.html" class="secondary">mlb</a></h2>
+                <h2><a href="../Whats Cooking/WhatsCooking.html" class="secondary">what's cooking?</a></h2>
+                <h2><a href="../Grapevine/grapevine.html" class="secondary">grapevine</a></h2>
+                <h2><a href="../Drift/drift.html" class="secondary">drift</a></h2>
+            </div>
+            <img class="divider-decoration-nav" src="../../Pictures/Abstract/Star.svg">
+            <div>
+                <h2><a href="../../Other Pages/about.html" class="secondary">about</a></h2>
+                <h2><a href="../../Other Pages/work.html" class="secondary">work</a></h2>
+            </div>
+        </div>
+    </div>
     <div id="navbar">
         <nav class="navbar">
             <div class="navbar-left">
@@ -31,28 +51,41 @@
                     <li><a href="../../Other Pages/about.html" class="primary">about</a></li>
                     <li><a href="../../Other Pages/work.html" class="primary">work</a></li>
                     <img id="hamburger" src="../../Pictures/Navbar/Menu.svg" alt="Menu Navbar">
+                    <img id="exit" src="../../Pictures/Navbar/Exit.svg" alt="Exit">
                 </ul>
             </div>
         </nav>
     </div>
-    <div id="header-image">
-        <div class="margin animate">
-            <div class="margin">
-                <div class="margin">
-                    <div class="row">
-                        <div class="img-container">
-                            <img class="screen" src="../../Pictures/Grapevine/Screens/Events/Events-4.png"
-                                alt="Drift Add Saved Reply Screen">
-                        </div>
-                        <div class="img-container">
-                            <img class="screen" src="../../Pictures/Grapevine/Screens/Gifs/Matching.gif"
-                                alt="Drift Conversation Screen">
-                        </div>
-                        <div class="img-container">
-                            <img class="screen" src="../../Pictures/Grapevine/Screens/SignUp/Events.png"
-                                alt="Drift Conversation Actions Bar">
-                        </div>
-                    </div>
+    <div class="header-image first ">
+        <div>
+            <div class="header-row grapevine">
+                <div class="header-alignment-margin-grapevine-two header-column">
+                    <img src="../../Pictures/Grapevine/Screens/SignUp/Select Your Location-1.png" class="header-screen-grapevine"
+                        alt="Intro screen">
+                    <img src="../../Pictures/Grapevine/Screens/Gifs/LetsSetUpYourProfile.gif" class="header-screen-grapevine"
+                        alt="Intro screen">
+                    <img src="../../Pictures/Grapevine/Screens/Profiles/Add Interest-1.png" class="header-screen-grapevine"
+                    alt="Intro screen">
+                </div>
+                <div class="header-column header-alignment-margin-grapevine">
+                    <img src="../../Pictures/Grapevine/Screens/Matching/Swipe Vinny 3.png" class="header-screen-grapevine"
+                        alt="Intro screen">
+                        <img src="../../Pictures/Grapevine/Screens/Events/Events.png" class="header-screen-grapevine"
+                        alt="Intro screen">
+                </div>
+                <div class="header-alignment-margin-grapevine-two header-column">
+                    <img src="../../Pictures/Grapevine/Screens/Onboarding/And I'm Viney!-1.png" class="header-screen-grapevine"
+                        alt="Intro screen">
+                        <img src="../../Pictures/Grapevine/Screens/Gifs/Intro.gif" class="header-screen-grapevine"
+                        alt="Intro screen">
+                    <img src="../../Pictures/Grapevine/Screens/Onboarding/What are your interests_.png" class="header-screen-grapevine"
+                    alt="Intro screen">
+                </div>
+                <div class="header-column header-alignment-margin-grapevine">
+                    <img src="../../Pictures/Grapevine/Screens/Gifs/Love Letters.gif" class="header-screen-grapevine"
+                        alt="Love Letters screen">
+                        <img src="../../Pictures/Grapevine/Screens/SignUp/Events.png"
+                        class="header-screen-grapevine" alt="Swipe Screen">
                 </div>
             </div>
         </div>
@@ -140,59 +173,587 @@
             </div>
         </div>
     </div>
-    <div id="core-features" class="margin">
-        <div class="project-divider animate">
-            <div class="divider-text row">
-                <h4>Core Features</h4>
-            </div>
-            <hr>
-        </div>
-        <div class="row centered animate">
-            <div class="text-with-image">
-                <h2>1. Feel safer with <strong>Grapevine Onboarding</strong>
-                </h2>
-                <p>Grapevine's onboarding process is designed for simplicity and comfort, using a one-action-per-page
-                    approach. It accommodates older romantics by offering sign-up through phone number, Google Gmail, or
-                    Facebook, recognizing many may prefer these options to remembering a username and password.</p>
-            </div>
-            <div class="image">
-                <img class="screen" src="../../Pictures/Grapevine/Screens/Gifs/Perfect Pair.gif" alt="Grapevine Onboarding">
+    <div class="margin unit">
+        <div id="research">
+            <div class="project-divider animate">
+                <div class="divider-text row">
+                    <h4>Research</h4>
+                </div>
+                <hr>
             </div>
         </div>
-        <div class="row block centered animate right">
-            <div class="text-with-image">
-                <h2>2. Make it all about you with <strong>Profiles</strong></h2>
-                <p>Grapevine encourages romantics to create detailed profiles that go beyond appearances. Users can
-                    share their interests, photos of pets, and favorite artists, providing a more authentic glimpse into
-                    their personalities. Vinny and Viney (The Grape Mascots) also prompt romantics to initiate matches,
-                    fostering an environment of taking chances.</p>
+        <div>
+            <h2 class="section animate">After 7 interviews with individuals over the age of 50 who are:</h2>
+            <div class="row two-options level-seven-hundred-column">
+                <div class="rect animate right">
+                    <div class="text-container">
+                        <p><strong>Divorced</strong></p>
+                    </div>
+                </div>
+                <div class="rect">
+                    <div class="text-container">
+                        <p><strong>Widowed</strong></p>
+                    </div>
+                </div>
+                <div class="rect animate">
+                    <div class="text-container">
+                        <p><strong>Single</strong></p>
+                    </div>
+                </div>
             </div>
-            <div class="image">
-                <img class="screen" src="../../Pictures/Drift/Screens/Gifs/SavedReply.gif"
-                    alt="Drift Add Saved Reply Screen">
+            <h2 class="section">I learned</h2>
+            <div class="row two-options level-seven-hundred-column">
+                <div class="rect animate">
+                    <div class="text-container">
+                        <p>Many individuals feel apprehensive about<strong> sharing personal information
+                                online.</strong></p>
+                    </div>
+                </div>
+                <div class="rect centered">
+                    <div class="text-container centered">
+                        <p><strong>5 of 7 felt uncomfortable with online dating </strong>because of this.</p>
+                    </div>
+                </div>
+                <div class="rect animate right">
+                    <div class="text-container">
+                        <p><strong>Many individuals felt more comfortable with meeting people in person</strong> than
+                            online
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row block centered animate">
-            <div class="text-with-image">
-                <h2>3. Find your people through <strong>Matching</strong></h2>
-                <p>Grapevine's algorithm suggests matches based on shared interests and past matches. After users
-                    connect, they receive notifications and reminders about their match. Vinny and Viney offer
-                    personalized tips, like going to events together..</p>
-            </div>
-            <div class="image">
-                <img class="screen" src="../../Pictures/Drift/Screens/Gifs/SlashCommand.gif"
-                    alt="Drift Slash Command Gif">
+    </div>
+    <div id="features" class="margin unit">
+        <div>
+            <div class="project-divider animate">
+                <div class="divider-text row">
+                    <h4>Core Features</h4>
+                </div>
+                <hr>
             </div>
         </div>
-        <div class="row block centered animate right">
-            <div class="text-with-image">
-                <h2>4. Get to know each other through <strong>Events, Phone calls, and Letters</strong></h2>
-                <p>Grapevine aims to create a positive dating experience by facilitating in-person events, phone calls,
-                    and letter-writing. These activities, whether initiated by users themselves or suggested by the app,
-                    promote genuine face-to-face interactions and help users to form deeper connections.</p>
+        <div class="block">
+            <h1 class="section block big animate" style="text-align: center; font-weight:500">
+                If loneliness is dangerous and a population vulnerable to loneliness is not comfortable with online
+                dating,<br><br>
+                <strong>How can we help them feel more at home online?</strong></h1>
+        </div>
+        <div class="block big">
+            <h2 class="section section animate"><strong>Grapevine brings a digital flair to dating methods of the
+                    past.</strong>
+            </h2>
+            <div class="flex-grid centered">
+                <div class="flex-container centered animate">
+                    <img class="screen gap" src="../../Pictures/Grapevine/Screens/Gifs/Intro.gif">
+                </div>
+                <div class="flex-container centered animate">
+                    <img class="screen gap" src="../../Pictures/Grapevine/Screens/Gifs/Events.gif">
+                </div>
+                <div class="flex-container centered animate">
+                    <img class="screen gap" src="../../Pictures/Grapevine/Screens/Gifs/Love Letters.gif">
+                </div>
+                <div class="flex-container centered animate">
+                    <img class="screen gap" src="../../Pictures/Grapevine/Screens/Gifs/Call.gif">
+                </div>
             </div>
-            <div class="image">
-                <img class="screen" src="../../Pictures/Drift/Screens/Gifs/Account.gif" alt="Drift Slash Command Gif">
+            <div class="animate">
+                <h2 class="section">We can help older romantics feel more comfortable with online dating by
+                    re-introducing
+                    digitized dating methods of the past.</h2>
+                <p class="text-container">During my interviews, many participants noted that they did not like texting
+                    people to get to know them. They were used to going to events, calling, and even writing letters to
+                    find
+                    the people they loved. In order to make the population I was looking to serve more comfortable, I
+                    felt
+                    it was important to emphasis all these methods from the get-go. Each of these features is at the
+                    forefront of the onboarding sequence to let older romantics know that I hear them.</p>
+            </div>
+        </div>
+        <h1 class="animate right unit font-weight-regular" style="text-align: center;">
+            Now that their interest is piqued...<br><br>
+            <strong>How can we help a population that is typically tech-illiterate and even tech-wary feel comfortable
+                signing up?</strong>
+        </h1>
+        <div class="block big">
+            <h2 class="section animate">
+                Grapevine <strong>utilizes affordances and a
+                    one-action per page method to ensure both ease of use and comfort</strong> during the onboarding
+                process.</h2>
+            <div class="flex-grid centered">
+                <div class="flex-container centered animate">
+                    <img class="screen gap" src="../../Pictures/Grapevine/Screens/Gifs/Perfect Pair.gif">
+                </div>
+                <div class="flex-container centered animate">
+                    <img class="screen gap" src="../../Pictures/Grapevine/Screens/Gifs/PhoneNumber.gif">
+                </div>
+                <div class="flex-container centered animate">
+                    <img class="screen gap" src="../../Pictures/Grapevine/Screens/Gifs/Sign Up.gif">
+                </div>
+                <div class="flex-container centered animate">
+                    <img class="screen gap" src="../../Pictures/Grapevine/Screens/Gifs/Select Location.gif">
+                </div>
+            </div>
+            <div class="animate">
+                <h2 class="section">We can help older romantics feel more comfortable with signing up by making the
+                    process
+                    as simple as possible.</h2>
+                <p class="text-container">Oftentimes, older populations have a difficult time with technology. By
+                    allowing
+                    them to utilize the sign up method of their choice, phone number, Google Gmail, or Facebook (which
+                    many
+                    older people are familiar with), older romantics will feel more comfortable signing up for
+                    Grapevine.
+                    <br><br>Through having my audience focus on one action per page, they will better understand what
+                    they
+                    need to do at each point of the sign-up flow.
+                </p>
+            </div>
+        </div>
+        <h1 class="animate right unit" style="text-align: center;">
+            Grapevine <strong>utilizes personable mascots Vinny and Viney to help the tech-wary feel less like they are
+                talking to a robot and more like they are talking to a friend</strong>.
+        </h1>
+        <div class="row full-width section centered animate level-one-thousand-column">
+            <div class="multi-screen-container one">
+                <div class="img-container">
+                    <img class="screen" src="../../Pictures/Grapevine/Screens/Gifs/LetsSetUpYourProfile.gif">
+                    <p>Vinny and Viney Intro</p>
+                </div>
+            </div>
+            <div class="text-container">
+                <h2>By having Vinny and Viney introduce themselves in a personable way, tech-wary older romantics will
+                    feel more comfortable with using the app.</h2>
+                <p>Vinny and Viney, the mascots of Grapevine, are grapes looking to personally help older romantics find
+                    love. It is their goal and what they were created to do. By making the app feel less like a robot
+                    and more like a friend, it personifies the app and makes older generations who do not like tech feel
+                    more connected to the product. </p>
+            </div>
+        </div>
+        <div class="row full-width centered animate right level-one-thousand-column unit reverse">
+            <div class="text-container">
+                <h2>
+                    Because Vinny and Viney guide you through the onboarding process, you will feel more comfortable
+                    sharing information about yourself.</h2>
+                <p>Some of the most important information Grapevine needs is your name, your age, and your dating
+                    preferences. Through establishing Vinny and Viney as a friendly presence, customers are more
+                    comfortable sharing about themselves. They are a presence that is physically there, asking you
+                    questions as you onboard. When you onboard with Grapevine, you're not just handing over your
+                    personal information to a faceless company, you're giving it to Vinny and Viney too. </p>
+            </div>
+            <div class="multi-screen-container two">
+                <div class="img-container">
+                    <img class="screen" src="../../Pictures/Grapevine/Screens/Gifs/ProfileSetup1.gif">
+                    <p>Profile Setup</p>
+                </div>
+                <div class="img-container">
+                    <img class="screen" src="../../Pictures/Grapevine/Screens/Gifs/ProfileSetup2.gif">
+                    <p>Profile Setup Continued</p>
+                </div>
+            </div>
+        </div>
+        <div class="row full-width section centered animate level-one-thousand-column unit">
+            <div class="multi-screen-container one">
+                <div class="img-container">
+                    <img class="screen" src="../../Pictures/Grapevine/Screens/Gifs/Button_Push_SparkVideo.gif">
+                    <p>Finish Profile</p>
+                </div>
+            </div>
+            <div class="text-container">
+                <h2>
+                    In order to reinforce this friendliness throughout the experience, Vinny and Viney are playful.</h2>
+                <p>After finishing setting up their initial profile, Vinny and Viney push the "Finish Profile" button to
+                    remind the audience to continue onto the app. This touch of playfulness is to reinforce this sense
+                    of friendship. These touches are present throughout the app.</p>
+            </div>
+        </div>
+        <h1 class="animate right unit font-weight-regular" style="text-align: center;">
+            Since their profile is set up...<br><br>
+            <strong>How can we help them find their perfect match?</strong></h1>
+        <div class="row full-width centered animate level-one-thousand-column unit reverse">
+            <div class="text-container">
+                <h2>
+                    Grapevine helps romantics find their match through a profile system which allows people to talk
+                    about themselves and their interests, not just show what they look like.</h2>
+                <p>While looking at someone's profile on other dating apps, often the most importance is put on what the
+                    person looks like. With Grapevine, romantics can add in their interests and even photos of their
+                    pets or favorite artists. This helps romantics get to know each other better and show off who they
+                    really are. Vinny and Viney also encourage romantics to match with one another once they reach the
+                    bottom of a profile. If you read through all that, might as well shoot your shot!
+                    <br><br>
+                    Interest icons by ByteDance
+                </p>
+            </div>
+            <div class="multi-screen-container two">
+                <div class="img-container">
+                    <img class="screen" src="../../Pictures/Grapevine/Screens/Gifs/ProfileScroll.gif">
+                    <p>Profile Setup</p>
+                </div>
+                <div class="img-container">
+                    <img class="screen" src="../../Pictures/Grapevine/Screens/Gifs/Interests.gif">
+                    <p>Interests</p>
+                </div>
+            </div>
+        </div>
+        <div class="full-width centered animate right level-one-thousand-column unit">
+            <div class="section">
+                <h2>Grapevine <strong>helps romantics find love through alerting them when they've found their "perfect
+                        pair".</strong></h2>
+            </div>
+            <div class="multi-screen-container">
+                <div class="img-container">
+                    <img class="screen" src="../../Pictures/Grapevine/Screens/Gifs/GrapevineExperienceMatching.gif">
+                </div>
+            </div>
+            <div class="text-container section">
+                <p>When someone decides they like another person, they can match with them if the other person agrees
+                    they would also like to match. Vinny and Viney encourage them by telling them that they've found
+                    their "Perfect Pair."</p>
+            </div>
+        </div>
+        <div class="animate full-width unit centered">
+            <h1 style="text-align: center;">
+                So what's next?<br><br>
+                It's time to meet up!</h1>
+        </div>
+        <div class="full-width centered animate right level-one-thousand-column unit">
+            <div class="section">
+                <h2>Grapevine <strong>helps romantics kindle the flame through allowing them to attend in-person events
+                        alongside other romantics.</strong></h2>
+            </div>
+            <div class="multi-screen-container">
+                <div class="img-container">
+                    <img class="screen" src="../../Pictures/Grapevine/Screens/Gifs/GrapevineExperienceEvents.gif">
+                </div>
+            </div>
+            <div class="text-container section">
+                <p>Together, matches can decide to go to events together. This replicates dating of the past as
+                    oftentimes, individuals would meet in person. These events are user proposed as well as generated by
+                    the app itself. Oftentimes, it's difficult to make all the plans yourself, having the app take some
+                    of the tasks off the romantic's hands will help to encourage customers to put themselves out there.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="unit margin" id="documentation">
+        <div>
+            <div class="project-divideranimate">
+                <div class="divider-text row">
+                    <h4>Documentation</h4>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="animate unit centered margin">
+            <h1 style="text-align: center;">
+                How did I document all of my decisions?</h1>
+        </div>
+        <div class="unit" id="carousel1">
+            <div class="row animate centered" style="gap: 0px;">
+                <!-- Previous Button -->
+                <button class="prev-btn" id="prev-btn1" onclick="changeSlide(-1)">&#9664;</button>
+                <!-- Carousel Container -->
+                <div>
+                    <div class="animate centered margin">
+                        <h2 style="max-width: 960px;">
+                            Grapevine has thorough documentation to ensure anyone can pick up the project in the future.
+                            <a href="https://drive.google.com/file/d/1XiooN0NKP7gycwjrk9v71cN0zx5EtZzg/view">Download
+                                here</a> or
+                            keep
+                            scrolling.
+                        </h2>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/1.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/2.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/3.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Next Button -->
+                <button class="next-btn" id="next-btn1" onclick="changeSlide(1)">&#9654;</button>
+            </div>
+            <div class="carousel-dots animate" id="carousel-dots-1"></div>
+        </div>
+        <div class="unit" id="carousel2">
+            <div class="row animate centered right" style="gap: 0px;">
+                <!-- Previous Button -->
+                <button class="prev-btn" id="prev-btn2" onclick="changeSlide(-1)">&#9664;</button>
+                <!-- Carousel Container -->
+                <div>
+                    <div class="animate right centered margin">
+                        <h2 style="max-width: 960px;">
+                            Grapevine <strong>has decided its typography based on the fonts' accessibility.
+                                Accessibility is
+                                important due to the older audience.</strong></h2>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/4.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/5.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/6.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/7.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/8.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Next Button -->
+                <button class="next-btn" id="next-btn2" onclick="changeSlide(1)">&#9654;</button>
+            </div>
+            <div class="carousel-dots animate right" id="carousel-dots-2"></div>
+        </div>
+        <div class="unit" id="carousel3">
+            <div class="row animate centered" style="gap: 0px;">
+                <!-- Previous Button -->
+                <button class="prev-btn" id="prev-btn3" onclick="changeSlide(-1)">&#9664;</button>
+                <!-- Carousel Container -->
+                <div>
+                    <div class="animate centered margin">
+                        <h2 style="max-width: 960px;">
+                            Grapevine's <strong>colors are defined by their function. Blue represents interaction, green
+                                represents progress, and pink represents love.</strong></h2>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/9.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/10.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/11.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/12.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Next Button -->
+                <button class="next-btn" id="next-btn3" onclick="changeSlide(1)">&#9654;</button>
+            </div>
+            <div class="carousel-dots animate" id="carousel-dots-3"></div>
+        </div>
+        <div class="unit" id="carousel4">
+            <div class="row animate centered right" style="gap: 0px;">
+                <!-- Previous Button -->
+                <button class="prev-btn" id="prev-btn4" onclick="changeSlide(-1)">&#9664;</button>
+                <!-- Carousel Container -->
+                <div>
+                    <div class="animate right centered margin">
+                        <h2 style="max-width: 960px;">
+                            There are <strong>three core elements</strong> in the Grapevine app, <strong><span class="grapevine-highlight-green">the loop</span>, <span class="grapevine-highlight-pink">the heart</span>, and <span class="grapevine-highlight-blue">the clouds</span>.
+                            Each
+                            are used
+                            to represent and accomplish different relationship states.</strong></h2>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/13.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/14.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/15.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/16.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/17.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/18.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/19.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/20.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Next Button -->
+                <button class="next-btn" id="next-btn4" onclick="changeSlide(1)">&#9654;</button>
+            </div>
+            <div class="carousel-dots animate right" id="carousel-dots-4"></div>
+        </div>
+        <div class="unit" id="carousel5">
+            <div class="row animate centered" style="gap: 0px;">
+                <!-- Previous Button -->
+                <button class="prev-btn" id="prev-btn5" onclick="changeSlide(-1)">&#9664;</button>
+                <!-- Carousel Container -->
+                <div>
+                    <div class="animate centered margin">
+                        <h2 style="max-width: 960px;">
+                            Grapevine's <strong>logo, contains each of the core visual elements: <span class="grapevine-highlight-green">the loop</span>, <span class="grapevine-highlight-pink">the heart</span>, and <span class="grapevine-highlight-blue">the clouds</span> 
+                                to reinforce the app's mission to help prevent loneliness in older romantics.</strong>
+                        </h2>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/21.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/22.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/23.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/24.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Next Button -->
+                <button class="next-btn" id="next-btn5" onclick="changeSlide(1)">&#9654;</button>
+            </div>
+            <div class="carousel-dots animate" id="carousel-dots-5"></div>
+        </div>
+        <div class="unit" id="carousel6">
+            <div class="row animate centered right" style="gap: 0px;">
+                <!-- Previous Button -->
+                <button class="prev-btn" id="prev-btn6" onclick="changeSlide(-1)">&#9664;</button>
+                <!-- Carousel Container -->
+                <div>
+                    <div class="animate right centered margin">
+                        <h2 style="max-width: 960px;">
+                            Grapevine's <strong>mascots, Vinny and Viney, adhere to a strict set of rules to ensure they
+                                are
+                                a
+                                friendly presence throughout the experience.</strong></h2>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/25.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/26.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/27.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/28.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/29.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../Pictures/Grapevine/Brand book/30.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Next Button -->
+                <button class="next-btn" id="next-btn6" onclick="changeSlide(1)">&#9654;</button>
+            </div>
+            <div class="carousel-dots animate right" id="carousel-dots-6"></div>
+        </div>
+    </div>
+    <div id="final-thoughts" style="background-color: black; padding-top: 40px; padding-bottom: 40px;">
+        <div class="margin">
+            <div class="project-divider animate">
+                <div class="divider-text row">
+                    <h4>Final Thoughts</h4>
+                </div>
+                <hr>
+            </div>
+            <div class="section full-width block big">
+                <div class="text-container animate">
+                    <h2 class="section">Taking a moment to look back, I learned a lot!<br>Here are some of my final
+                        thoughts.
+                    </h2>
+                </div>
+                <div class="row animate block evenly-spaced level-seven-hundred-column section big"
+                    style="align-items:flex-start">
+                    <div>
+                        <h2><strong>1. How to think about forming connections online</strong></h2>
+                    </div>
+                    <div>
+                        <p>Growing up with the internet, chatting with strangers online seemed pretty regular to me.
+                            However, through my interviews, I learned that many people older than me have an entirely
+                            different perspective. I thought that that was interesting, specially as it meant I needed
+                            to
+                            ensure their comfort with something I took for granted. One strategy was to prioritize
+                            events
+                            alongside swiping. In hindsight, I realize there was room for even more emphasis on events.
+                            I
+                            think this would have made them even more comfortable.
+                        </p>
+                    </div>
+                </div>
+                <div class="row animate right evenly-spaced block level-seven-hundred-column section big"
+                    style="align-items:flex-start">
+                    <div>
+                        <h2><strong>2. How to tailor an online experience to an older audience.</strong></h2>
+                    </div>
+                    <div>
+                        <p>When it came to creating an online experience for an older audience, I knew that
+                            accessibility
+                            was extremely important. Many older individuals may face challenges with small fonts and
+                            unclear
+                            interactive elements. Therefore, I made it a priority to ensure that the font size never
+                            dropped
+                            below 16px and that interactive areas were distinctly delineated for easy navigation. Crit
+                            from
+                            my friends and teachers helped a lot with this as many of them could point out problem areas
+                            I
+                            hadn't seen.</p>
+                    </div>
+                </div>
+                <div class="row animate block evenly-spaced level-seven-hundred-column section big"
+                    style="align-items:flex-start">
+                    <div>
+                        <h2><strong>3. How to create documentation for future use.</strong></h2>
+                    </div>
+                    <div>
+                        <p>For Grapevine, I knew it was something I wanted to return to or potentially build out more in
+                            the
+                            future. Therefore, I decided to create documentation explaining all of my choices. This way,
+                            I
+                            would have a comprehensive blueprint that could guide new iterations or potentially even the
+                            pickup of the project by others. Through creating the documentation, I looked at a lot of
+                            other
+                            style documentation books and learned about what is important to be included.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
