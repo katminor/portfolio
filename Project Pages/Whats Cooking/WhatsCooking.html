@@ -6,16 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kat Minor Portfolio</title>
     <link rel="stylesheet" type="text/css" href="../projectPage.css">
+    <link rel="stylesheet" type="text/css" href="../headerImage.css">
     <link rel="stylesheet" type="text/css" href="../../navbar-footer.css">
     <link rel="stylesheet" type="text/css" href="../../margin.css">
     <link rel="stylesheet" type="text/css" href="../islands.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="../../left-right-animations.js"></script>
-    <script src="../projectpage.js"></script>
+    <script src="../../navbar-footer.js"></script>
     <script src="../islands.js"></script>
 </head>
 
 <body>
+    <div class="full-nav">
+        <div class="nav-options-container">
+            <div>
+                <h2><a href="../MLB/mlb.html" class="secondary">mlb</a></h2>
+                <h2><a href="../Whats Cooking/WhatsCooking.html" class="secondary">what's cooking?</a></h2>
+                <h2><a href="../Grapevine/grapevine.html" class="secondary">grapevine</a></h2>
+                <h2><a href="../Drift/drift.html" class="secondary">drift</a></h2>
+            </div>
+            <img class="divider-decoration-nav" src="../../Pictures/Abstract/Star.svg">
+            <div>
+                <h2><a href="../../Other Pages/about.html" class="secondary">about</a></h2>
+                <h2><a href="../../Other Pages/work.html" class="secondary">work</a></h2>
+            </div>
+        </div>
+    </div>
     <div id="navbar">
         <nav class="navbar">
             <div class="navbar-left">
@@ -31,29 +47,29 @@
                     <li><a href="../../Other Pages/about.html" class="primary">about</a></li>
                     <li><a href="../../Other Pages/work.html" class="primary">work</a></li>
                     <img id="hamburger" src="../../Pictures/Navbar/Menu.svg" alt="Menu Navbar">
+                    <img id="exit" src="../../Pictures/Navbar/Exit.svg" alt="Exit">
                 </ul>
             </div>
         </nav>
     </div>
-    <div id="header-image">
-        <div class="margin animate">
-            <div class="margin">
-                <div class="margin">
-                    <div class="row">
-                        <div class="img-container">
-                            <img class="screen"
-                                src="../../Pictures/Drift/Screens/Mobile Messaging/Add Saved Reply Fill.png"
-                                alt="Drift Add Saved Reply Screen">
-                        </div>
-                        <div class="img-container">
-                            <img class="screen" src="../../Pictures/Drift/Screens/Gifs/ChatLog.gif"
-                                alt="Drift Conversation Screen">
-                        </div>
-                        <div class="img-container">
-                            <img class="screen" src="../../Pictures/Drift/Screens/Mobile Messaging/Actions Bar.png"
-                                alt="Drift Conversation Actions Bar">
-                        </div>
-                    </div>
+    <div class="header-image first">
+        <div>
+            <div class="header-row header-horizontal-aligned whatscooking">
+                <div class="header-column header-alignment-whatscooking-two">
+                    <img src="../../Pictures/What's Cooking/Screens/Instructions/Chef Doodle Explain Bottom Belt-2.png"
+                        class="header-screen-whatscooking" alt="Screen Image">
+                    <img src="../../Pictures/What's Cooking/Screens/Gifs/Different Kitchens.gif"
+                        class="header-screen-whatscooking" alt="Screen Image">
+                    <img src="../../Pictures/What's Cooking/Screens/Instructions/Chef Doodle Multiple Kitchens Agree.png"
+                        class="header-screen-whatscooking" alt="Screen Image">
+                </div>
+                <div class="header-column header-alignment-margin-whatscooking">
+                    <img src="../../Pictures/What's Cooking/Screens/Instructions/Chef Doodle Explain Menu-1.png"
+                        class="header-screen-whatscooking" alt="Screen Image">
+                    <img src="../../Pictures/What's Cooking/Screens/Gifs/Player Join.gif"
+                        class="header-screen-whatscooking" alt="Screen Image">
+                    <img src="../../Pictures/What's Cooking/Screens/Main Menu/Join Kitchen-1.png"
+                        class="header-screen-whatscooking" alt="Screen Image">
                 </div>
             </div>
         </div>
@@ -69,21 +85,8 @@
                         <hr>
                     </div>
                     <h1>What's Cooking?</h1>
-                    <h2 class="gray">Helping sales teams make sales from anywhere<br><br></h2>
-                    <p><strong>What is Drift?</strong><br>
-                        Drift, a B2B company, facilitates connections between
-                        businesses and prospective customers when their intent to buy is at its highest. By linking
-                        Sales Representatives with visitors when they're exploring pricing options and offering
-                        insights into their browsing behavior, Drift enables personalized sales. This approach
-                        leads to quicker and more effective sales.
-                        <br><br>
-                        <strong>What did I do?</strong><br>
-                    <p>To address low Drift Mobile usage, I conducted
-                        extensive user research and created a fully functional prototype in Figma.
-                        Through 12 in-depth interviews, I identified missing features that prevented more widespread
-                        Drift Mobile
-                        adoption. <span class="highlight">My insights drove increased usage, enabling sales teams to
-                            engage high-intent customers.</span></p>
+                    <h2 class="gray">What can go wrong when you're cooking with robots?<br><br></h2>
+                    <p>"What's Cooking?" is a multiplayer asymmetric cooperative game where players must serve hungry customers in an out of the ordinary kitchen. Ingredients and serving plates come out on two separate conveyor belts, chefs need to grab what's necessary before it's gone. With all the mayhem, communication is key. Players must balance the wants of their customers, the feedback from their fellow chefs (whether they be AI or human), and the speed of the conveyor belts. Ultimately, players must serve all of the customers with as few mistakes as they can.</p>
                     </p>
                 </div>
                 <div class="twenty-five" id="stats">
@@ -95,17 +98,18 @@
                     </div>
                     <div class="stat">
                         <h3>My Role</h3>
-                        <p>Product Designer</p>
+                        <p>UI/UX Artist</p>
                     </div>
                     <div class="stat">
                         <h3>Timeline</h3>
-                        <p>Three Months</p>
+                        <p>1 year</p>
                     </div>
                     <div class="stat">
                         <h3>The Team</h3>
-                        <p>Taylor Wagner — Manager <br><br>
-                            Shelton Miller — Product Manager <br><br>
-                            Ahmad Alhayek — Mobile Software Engineer </p>
+                        <p>Erik Harpstead — Faculty Advisor <br><br>
+                            Jiaqi Zhang - Software Engineer <br><br>
+                            Patrick Huang - Software Engineer<br><br>
+                        Stacey Cho - 3D Modeling</p>
                     </div>
                 </div>
             </div>
@@ -119,16 +123,218 @@
                 <div class="row evenly-spaced">
                     <div class="stat">
                         <h3>The Problem</h3>
-                        <p>The Drift Mobile app lacked essential functionalities expected by sales associates. Sales
-                            opportunities can arise at any moment, even while waiting in line at
-                            the grocery store. Without the features available to them on desktop, sales teams have a
-                            harder time addressing customer needs.</p>
+                        <p>At the time of this project, AI was still an emerging technology. ChatGPT had just come out and the thought of an AI team member seemed far out of reach. However, considering the potential benefits of having an AI team member, a question arises: How would be the most effective way to communicate with them? We wanted to explore how we can facilitate effective communication between human and AI players.</p>
                     </div>
                     <div class="stat">
                         <h3>My Solution</h3>
-                        <p>I determined that core functionalities, such as slash commands and saved replies, were
-                            missing. I created a fully functional prototype to how these features could be optimized for
-                            mobile.</p>
+                        <p>Wanting to keep the subjectivity of language while still making it easy for everyone to understand, I created a symbol-based system that would make it easy for both players and AI to communicate with one another. Given the time-sensitive nature of the game, quick communication was important, so using symbols instead of words made it much easier to communicate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="prototype" class="margin">
+        <div class="animate">
+            <div class="project-divider">
+                <div class="divider-text row">
+                    <h4>Tutorial</h4>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate">What's Cooking Tutorial Video</h2>
+                <video class="video full-width animate" controls autoplay muted>
+                    <source src="../../Pictures/What's Cooking/Video/What's Cooking Game UI.mp4" type="video/mp4">
+                </video>
+                <div class="column space-around section animate">
+                    <p class="text-container">In order to make the game more approachable, I created a tutorial which would be shown to players the first time they play. I took inspiration from JackBox games, which uses fun characters and animations to explain gameplay. The creation of the tutorial also helped for the team to iterate on mechanics and iron out a final rule set. Ultimately, my goal with this tutorial was to make it easy for players to jump right in.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate right">Welcome</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/Welcome.gif" class="full-width animate right">
+                <div class="column space-around section animate right">
+                    <p class="text-container">At the beginning of the tutorial, players meet Chef Doodle. To motivate players to work well together, I task players with a mission: rescue Chef Doodle's failing restaurant. The gamers turned chefs are his last hope. To heighten the emotional impact, I introduced a range of expressive emotes for Chef Doodle. These include happy, sad, interested, and neutral expressions, providing visual cues to complement his dialogue.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate">Join Game</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/Player Join.gif" class="full-width animate">
+                <div class="column space-around section animate">
+                    <p class="text-container">In order to establish their input device, I created a join game screen so that players can select both the control they plan to play with and the character that they want to play as. In total, there are 7 animal chef types to choose from. Regardless of whether the player is human or AI, everyone plays as an animal because this felt like good neutral ground between human and AI. </p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate right">Ingredient Conveyor</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/Ingrediants.gif" class="full-width animate right">
+                <div class="column space-around section animate right">
+                    <p class="text-container">During player interviews, I found that the conveyor belts were the main component of the game which confused players. In order to ensure that their function was clear, I created an animation to show how they work. This seemed to help players understand how this facet of the game functioned. In previous iterations of the tutorial, only the conveyor belt region was highlighted. This made it more difficult to understand.</p>
+                    <p class="gray" style="justify-content:left; display: flex; margin-top: 16px">Food 3D Models by Kenney</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate">Dish Conveyor</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/Dishes.gif" class="full-width animate">
+                <div class="column space-around section animate">
+                    <p class="text-container">In addition to the Food Conveyor Belt, there is also the Dish Conveyor Belt which players place finished food on to pass it between kitchens and ultimately to the end of the level. Dishes cannot be removed from the conveyor belt.</p>
+                        <p class="gray" style="justify-content:left; display: flex; margin-top: 16px">Dish 3D Models by Kenney</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate right">Conditions for Failure</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/Failure.gif" class="full-width animate right">
+                <div class="column space-around section animate right">
+                    <p class="text-container">Since the conveyor belts are the primary way players can accomplish their win condition, finishing all required meals, I thought it was important to show the players how they can lose. Players lose when three unfinished or incorrect dishes makes it to the end of the conveyor belt. I showed that failure would make Chef Doodle sad to persuade players to do their best.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate">Kitchen System</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/What'sCookingSeperateKitchens.gif"
+                    class="full-width animate">
+                <div class="column space-around section animate">
+                    <p class="text-container">Another aspect of the game which often confused players was how the kitchens connected. Since the kitchen layouts could vary between levels, I thought it was important to show players a sample layout. In this example, the kitchens are in a line connected by the dish and the food conveyors. The zoom out effect significantly improved player understanding.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate right">Importance of Teamwork</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/Teamwork.gif" class="full-width animate right">
+                <div class="column space-around section animate right">
+                    <p class="text-container">As well, it was important to show how communication between players would look. This visual aid would help players to understand basic things they could say to one another to ensure that they achieved the goal.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate">Joining a Level</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/Level Loader.gif" class="full-width animate">
+                <div class="column space-around section animate">
+                    <p class="text-container">Each level has a certain number of dishes which the team must successfully complete. However, there's a limit of three mistakes allowed before the team loses. To help players in preparing for the level, the orders are displayed prior to each level. This pre-level period also serves as debriefing time, enabling the team to strategize and assign soft roles like "I will work on hamburgers."</p>
+                </div>
+            </div>
+        </div>
+        <div class="animate">
+            <div class="project-divider">
+                <div class="divider-text row">
+                    <h4>Communication System</h4>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate right">Final Version</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/WhatsCookingCommunicationVerFinal.gif"
+                    class="full-width animate right">
+                <div class="column space-around section animate right">
+                    <p class="text-container">Since this game involves both AI and human players, I wanted to maintain the unique subjectiveness of human language while still making it easy for the AI to understand. <br> <br>
+
+                        I created a system where players can click to show what task they are doing. This information appears on the screens of other players, so everyone knows what's happening. Clicking again indicates that a task is finished.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate">Version 1</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/WhatsCookingCommunicationVer1.gif"
+                    class="full-width animate">
+                <div class="column space-around section animate">
+                    <p class="text-container">In the first version of this screen, I tried using different colors in a kitchen-note system to show how urgent certain tasks were. For instance, red indicated something was very urgent. However, after testing the game with real players, I found out that they didn't really feel the need for such explicit urgency cues. They just wanted to get the items they needed without any extra complications. Taking this feedback into account, I refined the prototype to make the process simpler, focusing on straightforward item requests.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate right">Version 2</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/WhatsCookingCommunicationVer2.gif"
+                    class="full-width animate right">
+                <div class="column space-around section animate right">
+                    <p class="text-container">In the second iteration, I decided to simplify the urgency system to just two distinct states: a "!" to indicate urgency and a "?" to represent a request for item location. However, during playtesting, I noticed that players often used these two communication points in similar ways, resulting in confusion and misinterpretation.<br><br>
+
+                        I also considered incorporating a spinning wheel to reduce the space the communication system took up, which would allow players to quickly indicate the specific food they were referring to. This change was aimed at making it faster and more precise. Additionally, I introduced the concept of a map within the communication system, giving players a visual representation of their position within the kitchen system.</p>
+                </div>
+            </div>
+        </div>
+        <div class="animate">
+            <div class="project-divider">
+                <div class="divider-text row">
+                    <h4>Game Lobby Join/Create</h4>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate">Join Kitchen</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/WhatsCookingMainMenu.gif"
+                    class="full-width animate">
+                <div class="column space-around section animate">
+                    <p class="text-container">The main menu screen lets players choose to join an existing kitchen or create a new one. To make this choice clear and fun, I created two simple illustrations, one for joining and one for creating. With these visual cues, players can easily tell the options apart and go where they want to.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block centered column">
+            <div class="space-around">
+                <h2 class="animate right">New Kitchen</h2>
+                <img src="../../Pictures/What's Cooking/Screens/Gifs/WhatsCookingCreateNewKitchen.gif"
+                    class="full-width animate right">
+                <div class="column space-around section animate right">
+                    <p class="text-container">When creating a kitchen, players pick a room name and select the number of players. I wanted for this process to feel straightforward, so the elements change colors and enlarge to show that they are selected.</p>
+                </div>
+            </div>
+        </div>
+        <div class="animate">
+            <div class="project-divider">
+                <div class="divider-text row">
+                    <h4>Figma File Organization</h4>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div style="display: flex;" class="centered">
+            <div class="section space-around">
+                <div class="card-holder card-gap">
+                    <div class="card-row card-gap animate">
+                        <div class="card-container">
+                            <img class="full-width animate"
+                                src="../../Pictures/What's Cooking/Figma Layout/WhatsCookingCharacters.webp">
+                        </div>
+                        <div class="card-container">
+                            <img class="full-width animate"
+                                src="../../Pictures/What's Cooking/Figma Layout/WhatsCookingCommunication.webp">
+                        </div>
+                    </div>
+                    <div class="card-container">
+                        <img class="full-width animate"
+                            src="../../Pictures/What's Cooking/Figma Layout/WhatsCookingIngredients.webp">
+                    </div>
+                </div>
+                <div class="column section animate">
+                    <p class="text-container">My goal was to ensure this file is user-friendly. I organized components and variants so that elements can quickly be changed. All assets were exported as sprite sheets and made available on a shared Google Drive for the convenience of developers.</p>
+                </div>
+                <div class="card-holder card-gap">
+                    <div class="card-container">
+                        <img class="full-width animate"
+                            src="../../Pictures/What's Cooking/Figma Layout/WhatsCookingInstructions.webp">
+                    </div>
+                    <div class="card-container">
+                        <img class="full-width animate"
+                            src="../../Pictures/What's Cooking/Figma Layout/WhatsCookingAllCommScreens.webp">
                     </div>
                 </div>
             </div>
@@ -142,7 +348,8 @@
                 <h2>Drift</h2>
             </div>
             <div class="column island centered">
-                <img class="island-image" data-href="../Grapevine/grapevine.html" src="../../Pictures/Islands/Grapevine.png">
+                <img class="island-image" data-href="../Grapevine/grapevine.html"
+                    src="../../Pictures/Islands/Grapevine.png">
                 <h2>Grapevine</h2>
             </div>
             <div class="column island centered">
