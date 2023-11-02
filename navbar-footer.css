@@ -225,6 +225,10 @@ padding: 0px;
     #hamburger {
         display: inline-block;
     }
+
+    .first-nav {
+        padding-top: 120px;
+    }
 }
 
 @media (max-width: 725px) {
@@ -262,6 +266,10 @@ padding: 0px;
     .preview-image.first {
         padding-top: 144px;
     }
+
+    .first-nav {
+        padding-top: 100px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -296,6 +304,10 @@ padding: 0px;
 
     .preview-image.first {
         padding-top: 132px;
+    }
+
+    .first-nav {
+        padding-top: 72px;
     }
 }
 
