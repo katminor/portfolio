@@ -1,0 +1,386 @@
+html {
+    background-color: #F0EFEA;
+}
+
+#canvas {
+    text-align: center;
+    animation-name: wobble-vertical-on-hover-canvas;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+h1 {
+    text-align:center;
+}
+
+h1 span {
+    font-size: 80px;
+    text-align: center;
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-bottom: 0px;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+@keyframes wobble-vertical-on-hover {
+    16.65% {
+        transform: translateY(16px);
+    }
+    33.3% {
+        transform: translateY(-12px);
+    }
+    49.95% {
+        transform: translateY(6px);
+    }
+    66.6% {
+        transform: translateY(-3px);
+    }
+    83.25% {
+        transform: translateY(1.5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes wobble-vertical-off-hover {
+    16.65% {
+        transform: translateY(16px);
+    }
+    33.3% {
+        transform: translateY(-12px);
+    }
+    49.95% {
+        transform: translateY(6px);
+    }
+    66.6% {
+        transform: translateY(-3px);
+    }
+    83.25% {
+        transform: translateY(1.5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes wobble-vertical-on-hover-entry {
+    16.65% {
+        transform: translateY(8px);
+    }
+    33.3% {
+        transform: translateY(-6px);
+    }
+    49.95% {
+        transform: translateY(3px);
+    }
+    66.6% {
+        transform: translateY(-1.5px);
+    }
+    83.25% {
+        transform: translateY(.75px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes wobble-vertical-on-hover-canvas {
+    16.65% {
+        transform: translateY(6px);
+    }
+    33.3% {
+        transform: translateY(-4.5px);
+    }
+    49.95% {
+        transform: translateY(2.25px);
+    }
+    66.6% {
+        transform: translateY(-1.085x);
+    }
+    83.25% {
+        transform: translateY(.5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.wobble-vertical-on-hover {
+    display: inline-block;
+    animation-name: wobble-vertical-off-hover;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.wobble-vertical-on-hover:hover {
+    animation-name: wobble-vertical-on-hover;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+#one {
+    color: tomato;
+}
+
+#two {
+    color: lightseagreen;
+}
+
+#three {
+    color: orange;
+}
+
+#four {
+    color: dodgerblue;
+}
+
+#five {
+    color: blueviolet;
+}
+
+#zero {
+    color: #F0EFEA;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+
+h3 {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    margin-top: -22.5px;
+    padding-bottom: 15px;
+    color: #B4B2AB;
+    animation-name: wobble-vertical-on-hover-entry;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.highlight {
+    font-size: 20px;
+    display: inline-block;
+    text-align: center;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    margin-top: -20px;
+    color: #8A8982;
+}
+
+#buttons {
+    text-align: center;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    animation-name: wobble-vertical-on-hover-entry;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+button:focus {outline:0;}
+
+.dressUpButtons {
+    height: 40px;
+    width: 140px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: bold;
+    color: #F0EFEA;
+    font-size: 13px;
+    background-color: #B4B2AB;
+    border-radius: 100px;
+    border: none;
+    transition: all .2s;
+}
+
+.dressUpButtons:hover {
+    height: 45px;
+    width: 150px;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    transition: all .2s;
+}
+
+.dressUpButtons span {
+    position: relative; 
+    z-index: 1;
+}
+
+.dressUpButtons:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 45px;
+    width: 150px;
+    border-radius: 20px;
+    background: lightseagreen;
+    transition: all .4s ease-in-out;
+    transform: translateX(-100%) translateY(0%)
+}
+
+.dressUpButtons:hover:after {
+    transform: translateX(0%) translateY(0%);
+}
+
+.feedMeButton {
+    height: 40px;
+    width: 600px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: bold;
+    color: #F0EFEA;
+    font-size: 18px;
+    background-color: #B4B2AB;
+    border-radius: 100px;
+    border: none;
+    transition: all .2s;
+}
+
+.feedMeButton:hover {
+    height: 45px;
+    width: 610px;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 12.5px;
+    transition: all .2s;
+}
+
+.feedMeButton span {
+    position: relative; 
+    z-index: 1;
+}
+
+.feedMeButton:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 45px;
+    width: 610px;
+    border-radius: 20px;
+    background: tomato;
+    transition: all .4s ease-in-out;
+    transform: translateX(-100%) translateY(0%)
+}
+
+.feedMeButton:hover:after {
+    transform: translateX(0%) translateY(0%);
+}
+
+p {
+    margin-top: 0px;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color:#B4B2AB
+}
+
+
+@keyframes headBob {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes ufoBob {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-25deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes tailWag {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.hat {
+    animation-name: headBob;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.hat1 {
+    animation-name: ufoBob;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#head {
+    transform: translateY(-100px);
+    animation-name: headBob;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#hand {
+    transform-origin: 43px 184px; 
+    animation-name: wave;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#tail {
+    transform-origin: 100px 184px; 
+    animation-name: tailWag;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
