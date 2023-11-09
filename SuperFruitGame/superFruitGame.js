@@ -1,7 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Size Variables (initialize first)
-    let screenSize = window.innerHeight + window.innerWidth; /* Get the screen size to help determine size of everything */
-    let ballSize = Math.min(72, Math.max(36, Math.floor((screenSize / 2) / 23))) /* Determine ball size based on screen size */
+    // Screen Size Variables
+    let firstDivider = document.getElementById('first-divider');
+    let firstDividerHeight = firstDivider.offsetHeight;
+    let navbar = document.getElementById('navbar');
+    let navbarHeight = navbar.offsetHeight;
+    let superfruitGame = document.getElementById('game');
+    let superfruitGameHeight = superfruitGame.offsetHeight;
+    let superfruitGameWidth = superfruitGame.offsetWidth;
+    superfruitGame.style.marginTop = `${navbarHeight}px`;
+    firstDivider.style.marginTop = `${navbarHeight + superfruitGameHeight - (firstDividerHeight / 2)}px`;
+    // Size Variables
+    let screenSize = superfruitGameHeight + superfruitGameWidth; /* Get the screen size to help determine size of everything */
+    let outerScreenSize = window.innerHeight + window.innerWidth; /* Get the screen size to help determine size of everything */
+    let ballSize = Math.min(72, Math.max(36, Math.floor((screenSize / 2) / 18))) /* Determine ball size based on screen size */
     let fruitSize = ballSize * 1.42; /* Determine fruit size based on ball size */
     let throwAreaSize = ballSize * 10; /* Throw area size based on ball */
     let fruitAmount = Math.round(screenSize / 700) /* Amount of fruit based on screen size */
@@ -14,33 +25,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const gameTime = 1800; /* How long the game is in milliseconds */
     const textAboveBall = document.getElementById('with-ball'); // Get text above ball
     const textOffsetY = -40; // Adjust this value to control the vertical offset
-
     // Ball-adjacent Constants
     const throwArea = document.getElementById('throw-area'); /* Throw area on document */
     const ball = document.getElementById('ball'); /* Ball player controls */
     const trailCircles = []; /* Trail attached to the ball */
     const trailLength = 16; /* Max trail length */
+    const shadowBox = 6; // The height of the stroke around the ball
     // Fruit-adjacent Constants
     const fruitContainer = document.getElementById('fruit-container'); /* Where all the fruit should be placed */
     const fruitCounter = document.getElementById('fruit-counter'); /* Where the counted fruit/score goes */
     const wowText = document.getElementById('wow-text'); /* Text that shows wow when a fruit collision happens */
     const fruitPaths = [ // Fruit Image paths
-        '../Pictures/Fruit/Orange.svg',
-        '../Pictures/Fruit/Watermelon.svg',
-        '../Pictures/Fruit/Cherry.svg',
-        '../Pictures/Fruit/Apple.svg',
-        '../Pictures/Fruit/Blueberry.svg',
-        '../Pictures/Fruit/Strawberry.svg',
-        '../Pictures/Fruit/Banana.svg',
-        '../Pictures/Fruit/Lemon.svg',
-        '../Pictures/Fruit/Raspberry.svg',
-        '../Pictures/Fruit/Pear.svg',
-        '../Pictures/Fruit/Pomegranate.svg',
-        '../Pictures/Fruit/Grape.svg',
-        '../Pictures/Fruit/Blackberry.svg',
-        '../Pictures/Fruit/Kiwi.svg',
-        '../Pictures/Fruit/Pineapple.svg',
-        '../Pictures/Fruit/Mango.svg',
+        'Pictures/Fruit/Orange.svg',
+        'Pictures/Fruit/Watermelon.svg',
+        'Pictures/Fruit/Cherry.svg',
+        'Pictures/Fruit/Apple.svg',
+        'Pictures/Fruit/Blueberry.svg',
+        'Pictures/Fruit/Strawberry.svg',
+        'Pictures/Fruit/Banana.svg',
+        'Pictures/Fruit/Lemon.svg',
+        'Pictures/Fruit/Raspberry.svg',
+        'Pictures/Fruit/Pear.svg',
+        'Pictures/Fruit/Pomegranate.svg',
+        'Pictures/Fruit/Grape.svg',
+        'Pictures/Fruit/Blackberry.svg',
+        'Pictures/Fruit/Kiwi.svg',
+        'Pictures/Fruit/Pineapple.svg',
+        'Pictures/Fruit/Mango.svg',
     ];
     const fruitOpacities = Array.from(fruits).map(() => 1); /* Fruit opacities, helps with transition */
     // Time Constants
@@ -49,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Progress Bar Constants
     const collectedFruitProgressBar = document.getElementById('collected-fruit-progress'); /* Collected fruit progress bar displays how many fruit til super fruit mode */
     const superFruitTimer = document.getElementById('super-fruit-timer'); /* Timer for super fruit mode */
+    const timerBar = document.getElementById('timer-bar');
     const backgroundBar = document.getElementById('background-bar'); /* Background bar to visually organize the progress bar */
     const radius = collectedFruitProgressBar.r.baseVal.value; /* Radius of the progress bars */
     const circleLength = (radius * Math.PI * 2); /* Circle length is the length of the circle so that super fruit mode can count down */
@@ -71,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let mouseLeftTime = 0; // Track how long the mouse has been outside the throw area
     // Fruit Adjacent Variables
     let superFruitMode = false; /* Are you in super fruit mode? */
-    let position = { x: (window.innerWidth - ballSize) / 2, y: (window.innerHeight - ballSize) / 2 }; /* Determine the position the ball is in, x and y. Initially starts in middle of screen */
+    let position = { x: (superfruitGameWidth - ballSize) / 2, y: (superfruitGameHeight - ballSize) / 2 }; /* Determine the position the ball is in, x and y. Initially starts in middle of screen */
     let collectedFruits = 0; // Fruit collected counting up to Super Fruit Mode. Then set back to 0
     let totalFruits = 0; // Total Fruit
     // Color Variables
@@ -91,9 +103,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function readjustSize() {
-        screenSize = window.innerHeight + window.innerWidth; /* Get the screen size to help determine size of everything */
+        superfruitGameHeight = superfruitGame.offsetHeight;
+        superfruitGameWidth = superfruitGame.offsetWidth;
+        screenSize = superfruitGameHeight + superfruitGameWidth; /* Get the screen size to help determine size of everything */
         if (!superFruitMode) {
-            ballSize = Math.min(72, Math.max(36, Math.floor((screenSize / 2) / 23))) /* Determine ball size based on screen size */
+            ballSize = Math.min(72, Math.max(36, Math.floor((screenSize / 2) / 18))) /* Determine ball size based on screen size */
             fruitSize = ballSize * 1.42; /* Determine fruit size based on ball size */
             throwAreaSize = ballSize * 10; /* Throw area size based on ball */
         }
@@ -105,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
             fruit.style.width = `${fruitSize}px`;
             fruit.style.height = `${fruitSize}px`;
         });
+        firstDivider.style.marginTop = `${navbarHeight + superfruitGameHeight - (firstDividerHeight / 2)}px`;
     }
 
     // Set progress bars
@@ -159,9 +174,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Get the collected fruit's x and y boundary
         const collectedFruitRect = collectedFruit.getBoundingClientRect();
         // Max width based on the window width
-        const maxWidth = window.innerWidth - (collectedFruitRect.width * 2);
+        const maxWidth = superfruitGameWidth - (collectedFruitRect.width * 2);
         // Max width based on the window height
-        const maxHeight = window.innerHeight - (collectedFruitRect.height * 2);
+        const maxHeight = superfruitGameHeight - (collectedFruitRect.height * 2);
 
         // Generate random positions within the viewport
         const randomX = Math.random() * maxWidth;
@@ -348,6 +363,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Scroll Variables
+    function getScroll() {
+        let scrolled = window.scrollY;
+        return scrolled;
+    }
+
     // Create trail circles
     for (let i = 0; i < trailLength; i++) {
         const trailCircle = document.createElement('div');
@@ -472,15 +493,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (distance <= throwAreaSize / 2) {
                     insideThrowArea = true;
                     position.x = mouseX - ballSize / 2;
-                    position.y = mouseY - ballSize / 2;
+                    position.y = mouseY - (ballSize / 2) + getScroll() - (navbarHeight);
                     mouseLeftTime = 0; // Reset the time when mouse re-enters the throw area
+                    if (position.y >= superfruitGameHeight - ballSize) {
+                        position.y = superfruitGameHeight - ballSize - shadowBox;
+                    }
                 } else if (!isReleased) {
                     insideThrowArea = false;
                     const angle = Math.atan2(mouseY - throwAreaCenterY, mouseX - throwAreaCenterX);
                     const newX = throwAreaCenterX + (throwAreaSize / 2) * Math.cos(angle) - ballSize / 2;
-                    const newY = throwAreaCenterY + (throwAreaSize / 2) * Math.sin(angle) - ballSize / 2;
+                    const newY = throwAreaCenterY + (throwAreaSize / 2) * Math.sin(angle) - (ballSize / 2) + getScroll() - (navbarHeight);
                     position.x = newX;
                     position.y = newY;
+                    if (position.y >= superfruitGameHeight - ballSize) {
+                        position.y = superfruitGameHeight - ballSize - shadowBox;
+                    }
                 }
             }
         }
@@ -618,11 +645,11 @@ document.addEventListener('DOMContentLoaded', function () {
             textAboveBall.style.left = `${position.x + (ballSize / 2)}px`;
 
             if (firstGame) {
-                position.x = (window.innerWidth / 2)
+                position.x = (superfruitGameWidth / 2)
             }
             if (bounceTicks == 0) { // Make the ball bounce to remind people you should drag it. There is probably a more efficient way to do this without bounce ticks.
-                const min = window.innerHeight / 40;
-                const max = window.innerHeight / 80;
+                const min = superfruitGameHeight / 40;
+                const max = superfruitGameHeight / 80;
                 const bounceStrength = Math.floor(Math.random() * (max - min + 1)) + min; // random bounce velocity
                 velocity.y = bounceStrength;
                 bounceTicks = 500;
@@ -632,7 +659,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (gameTimeCounter >= 0) {// if game has started, count the game time
                 gameTimeCounter -= 1;
                 const remainingTimePercentage = (gameTimeCounter / gameTime) * 100;
-                const timerBar = document.getElementById('timer-bar');
                 timerBar.style.width = `${remainingTimePercentage}%`;
                 timerBar.style.transition = '0s';
 
@@ -689,20 +715,19 @@ document.addEventListener('DOMContentLoaded', function () {
             position.y += velocity.y; // Physics
             velocity.x *= friction; // Physics
             velocity.y *= friction; // Physics
-            const shadowBox = 11;
             //Bounce off wall condition
             // 11 of the height of the shadowbox
-            if (position.x <= 0 || position.x >= window.innerWidth - ball.clientWidth - 0) {
+            if (position.x <= 0 || position.x >= superfruitGameWidth - ball.clientWidth - 0) {
                 velocity.x = -velocity.x // Reverse horizontal velocity
                 if (position.x <= shadowBox) {
                     position.x = 1; // Move the ball slightly away from the left wall
                 } else {
-                    position.x = window.innerWidth - ball.clientWidth - 1; // Move the ball slightly away from the right wall
+                    position.x = superfruitGameWidth - ball.clientWidth - 1; // Move the ball slightly away from the right wall
                 }
             }
-            if (position.y <= 11 || position.y >= window.innerHeight - ball.clientHeight - shadowBox) {
+            if (position.y <= 11 || position.y >= superfruitGameHeight - ball.clientHeight - shadowBox) {
                 velocity.y = -velocity.y * friction;
-                position.y = Math.max(0, Math.min(position.y, window.innerHeight - ball.clientHeight - shadowBox)); // Ensure the ball stays within the window
+                position.y = Math.max(0, Math.min(position.y, superfruitGameHeight - ball.clientHeight - shadowBox)); // Ensure the ball stays within the window
             }
         }
 
