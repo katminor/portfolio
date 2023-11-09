@@ -79,4 +79,14 @@ document.addEventListener('DOMContentLoaded', function() {
         exit.style.display = 'none'; // Hide exit
         exit.style.opacity = '0'; // Set exit opacity back to 0
     });
+
+    // Prevent horizontal scrolling
+    window.addEventListener('scroll', function() {
+    let scrolledX = window.scrollX;
+    let scrolledY = window.scrollY;
+    console.log(scrolledX + ", " + scrolledY)
+    if (scrolledX !== 0) {
+        window.scrollTo(0, scrolledY);
+    }
+    });
 });
