@@ -443,6 +443,7 @@ a {
 /* Hamburger Open */
 
 .full-nav {
+    position: fixed;
     display: none;
     z-index: 10;
     width: 100vw;
