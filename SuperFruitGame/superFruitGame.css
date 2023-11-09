@@ -10,13 +10,15 @@
     width: 100vw;
     height: 80vh;
     margin-top: calc(80px - 2px);
-    overflow: hidden;
     /* Adjust Font Color */
     color: #ffffff;
     /* Adjust Font */
     font-family: 'Montserrat', sans-serif;
     padding: 0;
     border: none;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /* Prevents dragging */
@@ -471,4 +473,22 @@
     stroke-width: var(--stroke);
     fill-opacity: 0;
     stroke: #333;
+}
+
+@media (max-height: 725px) {
+    #game {
+        height: 70vh;
+    }
+}
+
+@media (max-height: 500px) {
+    #game {
+        height: 60vh;
+    }
+}
+
+@media (max-height: 350px) {
+    #game {
+        height: 50vh;
+    }
 }
