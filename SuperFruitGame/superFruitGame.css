@@ -9,6 +9,7 @@
     position: absolute;
     width: 100vw;
     height: 80vh;
+    margin-top: calc(80px - 2px);
     overflow: hidden;
     /* Adjust Font Color */
     color: #ffffff;
@@ -30,8 +31,9 @@
 }
 
 #timer-bar {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    z-index: 8;
+    top: calc(80px - 2px);
     left: 0;
     width: 100%;
     /* Make it stretch all the way across the top */
@@ -140,6 +142,16 @@
     }
 }
 
+@media (max-width: 725px) {
+    #timer-bar {
+        top: calc(72px - 2px);
+    }
+
+    #game {
+        margin-top: calc(72px - 2px);
+    }
+}
+
 /* Adjust text size for even smaller screens (e.g., mobile devices) */
 @media (max-width: 675px) {
     #hello {
@@ -194,6 +206,14 @@
         height: 12px;
         width: 12px;
     }
+
+    #timer-bar {
+        top: calc(68px - 2px);
+    }
+
+    #game {
+        margin-top: calc(68px - 2px);
+    }
 }
 
 /* Adjust text size for even smaller screens (e.g., mobile devices) */
@@ -216,6 +236,14 @@
     .decorative-text {
         height: 8px;
         width: 8px;
+    }
+
+    #timer-bar {
+        top: calc(56px - 2px);
+    }
+
+    #game {
+        margin-top: calc(56px - 2px);
     }
 }
 
@@ -243,6 +271,14 @@
     .decorative-text {
         height: 4px;
         width: 4px;
+    }
+
+    #timer-bar {
+        top: calc(40px - 2px);
+    }
+
+    #game {
+        margin-top: calc(40px - 2px);
     }
 }
 
