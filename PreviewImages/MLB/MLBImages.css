@@ -1,58 +1,60 @@
-body {
-    margin: 0;
-    transform: rotate(-22.5deg);
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.row {
+.mlb-row {
     display: flex;
     flex-direction: row;
     gap: 32px;
+    transform: rotate(-22.5deg);
+    margin-top: -440px;
+    margin-left: 0px;
 }
 
-.column {
+.mlb-column {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
-.screen { 
+.mlb-icon-row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.mlb-screen { 
     background-color:gray;
 	width:540px;
 	height:303px;
 }
-.banner { 
+.mlb-banner { 
     background-color:gray;
 	width:540px;
 	height:62px;
 }
-.cards { 
+.mlb-cards { 
     display: grid;
     grid-template-columns: repeat(2, 188px);
     grid-template-rows: repeat(2, 266px);
     gap: 32px;
 }
-.card { 
+.mlb-card { 
     background-color:gray;
     width: 188px;
     height: 266px;
 }
 
-.icon { 
+.mlb-icon { 
     background-color:gray;
 	width:118px;
 	height:118px;
 }
 
-.right-aligned {
+.mlb-right-aligned {
     justify-content: flex-end;
 }
 
-.alignment-margin {
+.mlb-alignment-margin {
     margin-bottom: 800px;
 }
 
-.horizontal-aligned {
+.mlb-horizontal-aligned {
     align-items: center;
 }
