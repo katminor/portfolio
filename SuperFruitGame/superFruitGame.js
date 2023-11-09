@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let superfruitGame = document.getElementById('game');
     let superfruitGameHeight = superfruitGame.offsetHeight;
     let superfruitGameWidth = superfruitGame.offsetWidth;
-    superfruitGame.style.marginTop = `${navbarHeight}px`;
-    firstDivider.style.marginTop = `${navbarHeight + superfruitGameHeight - (firstDividerHeight / 2)}px`;
+    firstDivider.style.marginTop = `${navbarHeight + superfruitGameHeight - (firstDividerHeight / 2) - 2}px`;
     // Size Variables
     let screenSize = superfruitGameHeight + superfruitGameWidth; /* Get the screen size to help determine size of everything */
     let outerScreenSize = window.innerHeight + window.innerWidth; /* Get the screen size to help determine size of everything */
@@ -119,7 +118,8 @@ document.addEventListener('DOMContentLoaded', function () {
             fruit.style.width = `${fruitSize}px`;
             fruit.style.height = `${fruitSize}px`;
         });
-        firstDivider.style.marginTop = `${navbarHeight + superfruitGameHeight - (firstDividerHeight / 2)}px`;
+        navbarHeight = navbar.offsetHeight;
+        firstDivider.style.marginTop = `${navbarHeight + superfruitGameHeight - (firstDividerHeight / 2) - 2}px`;
     }
 
     // Set progress bars
