@@ -1,7 +1,6 @@
 body {
     margin: 0px;
     background-color: #1A1A1A;
-    overflow: hidden;
     cursor: pointer;
 }
 
@@ -10,7 +9,6 @@ iframe {
     border: none;
     width: 250%;
     height: 250%;
-    overflow: hidden;
     z-index: 0;
 }
 
@@ -30,8 +28,8 @@ iframe {
 }
 
 #Drift {
-    margin-top: -525px;
-    margin-left: 0px;
+    margin-top: -264px;
+    margin-left: 80px;
 }
 
 .preview {
