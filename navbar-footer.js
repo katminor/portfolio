@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var exit = document.getElementById('exit');
     var fullNav = document.querySelector('.full-nav');
     var body = document.querySelector('body');
+    fullNav.style.opacity = '0';
+    fullNav.style.display = 'none';
 
     // Function to toggle hamburger and exit visibility
     function toggleNavVisibility() {
@@ -20,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburger.addEventListener('click', function() {
         if (window.innerWidth <= 1000) {
             if (parseFloat(getComputedStyle(fullNav).opacity) === 0) {
-                fullNav.style.display = 'block';
+                fullNav.style.display = 'flex';
                 setTimeout(function() {
                     fullNav.style.opacity = '1';
                 }, 0);
@@ -52,6 +54,16 @@ document.addEventListener('DOMContentLoaded', function() {
             body.style.overflow = 'auto';
             exit.style.display = 'none'; // Hide exit
             exit.style.opacity = '0'; // Set exit opacity back to 0
+        }
+        else if (window.innerWidth <= 1000) {
+            if (parseFloat(getComputedStyle(fullNav).opacity) === 0) {
+                hamburger.style.opacity = '1'; // Set hamburger opacity back to 1
+                hamburger.style.display = 'inline-block'; // Show hamburger
+            }
+            if (parseFloat(getComputedStyle(fullNav).opacity) === 1) {
+                hamburger.style.opacity = '0'; // Set hamburger opacity back to 1
+                hamburger.style.display = 'none'; // Show hamburger
+            }
         }
     });
 
