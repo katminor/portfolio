@@ -5,23 +5,15 @@
     --timer: 0;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-}
-
 #game {
-    margin: 0;
+    position: absolute;
     width: 100vw;
-    height: 100vh;
-    overflow: visible;
+    height: 80vh;
+    overflow: hidden;
     /* Adjust Font Color */
     color: #ffffff;
     /* Adjust Font */
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
     padding: 0;
     border: none;
 }
@@ -43,7 +35,7 @@ body {
     left: 0;
     width: 100%;
     /* Make it stretch all the way across the top */
-    height: .75%;
+    height: 1.2%;
     /* Adjust the height as needed */
     background-color: white;
     /* Choose a background color */
@@ -68,7 +60,7 @@ body {
     opacity: 0;
     /* Centered in the middle of the screen for resizing purposes */
     top: 40%;
-    left: 45%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: left;
     /* Big Bold Text */
@@ -324,6 +316,7 @@ body {
 /* Score Container */
 #score-container {
     position: absolute;
+    display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -331,6 +324,7 @@ body {
     font-weight: bold;
     color: white;
     z-index: 2;
+    transition: color 2s ease-in-out, top .5s ease-in-out;
 }
 
 /* Fruit Counter */
@@ -426,7 +420,6 @@ body {
     transform: translate(-50%, -50%);
     font-weight: bold;
     font-size: 48px;
-    color: white;
     z-index: 2;
     transition: font-size 2s ease-in-out, opacity 0.25s ease-in-out;
 }
