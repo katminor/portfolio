@@ -19,6 +19,8 @@ body {
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar { display: none; }
+
 .first {
     padding-top: 80px;
 }
@@ -451,7 +453,7 @@ a {
     background-color: black;
     text-align: center;
     justify-content: center;
-    align-items:flex-end;
+    align-items: flex-end;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     opacity: 0;
