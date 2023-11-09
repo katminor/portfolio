@@ -1,43 +1,45 @@
-body {
-    margin: 0;
-    overflow: hidden;
-    cursor: pointer;
-    transform: rotate(-22.5deg);
-}
-
-.row {
+.whats-cooking-row {
     display: flex;
     flex-direction: row;
     gap: 32px;
+    transform: rotate(-22.5deg);
+    margin-top: -570px;
+    margin-left: -100px;
 }
 
-.column {
+.whats-cooking-column {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
-.screen { 
+.whats-cooking-icon-row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.whats-cooking-screen { 
     background-color:gray;
 	width:540px;
 	height:303px;
 }
 
-.icon { 
+.whats-cooking-icon { 
 	width:124px;
 	height:124px;
     margin-top: -24px;
 }
 
-.right-aligned {
+.whats-cooking-right-aligned {
     justify-content: flex-end;
 }
 
-.alignment-margin {
+.whats-cooking-alignment-margin {
     margin-top: 514px;
     
 }
 
-.horizontal-aligned {
+.whats-cooking-horizontal-aligned {
     align-items: center;
 }
