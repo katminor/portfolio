@@ -25,6 +25,7 @@ border: none;
 
 #game-container {
     z-index: 0;
+    overflow: hidden;
 }
 
 #all-projects {
@@ -37,7 +38,6 @@ border: none;
 }
 
 .project-option {
-    overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     background-color: #1A1A1A;
     color: white;
@@ -82,7 +82,6 @@ border: none;
 }
 
 #first-divider {
-    margin-top: -16px;
     z-index: 1;
 }
 
@@ -129,14 +128,12 @@ border: none;
 
 .preview-image {
     flex: 0 0 auto;
-    overflow: hidden;
 }
 
 .project-option iframe {
     height: 560px;
     width: 900px;
     transform: scale(.8);
-    overflow: hidden;
     transition: none;
 }
 
