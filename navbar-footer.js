@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         exit.style.opacity = '0'; // Set exit opacity back to 0
     });
 
-    // Prevent horizontal scrolling
+
     window.addEventListener('scroll', function() {
     let scrolledX = window.scrollX;
     let scrolledY = window.scrollY;
