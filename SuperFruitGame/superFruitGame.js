@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let screenSize = superfruitGameHeight + superfruitGameWidth; /* Get the screen size to help determine size of everything */
     let outerScreenSize = window.innerHeight + window.innerWidth; /* Get the screen size to help determine size of everything */
     let ballSize = Math.min(72, Math.max(36, Math.floor((screenSize / 2) / 18))) /* Determine ball size based on screen size */
-    let fruitSize = ballSize * 1.42; /* Determine fruit size based on ball size */
+    let scaleSize = 1.2;
+    let fruitSize = ballSize * scaleSize; /* Determine fruit size based on ball size */
     let throwAreaSize = ballSize * 10; /* Throw area size based on ball */
     let fruitAmount = Math.round(screenSize / 700) /* Amount of fruit based on screen size */
     let fruits = document.querySelectorAll('.fruit');  /* All fruits on screen */
@@ -107,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
         screenSize = superfruitGameHeight + superfruitGameWidth; /* Get the screen size to help determine size of everything */
         if (!superFruitMode) {
             ballSize = Math.min(72, Math.max(36, Math.floor((screenSize / 2) / 18))) /* Determine ball size based on screen size */
-            fruitSize = ballSize * 1.42; /* Determine fruit size based on ball size */
+            fruitSize = ballSize * scaleSize; /* Determine fruit size based on ball size */
             throwAreaSize = ballSize * 10; /* Throw area size based on ball */
         }
         fruitAmount = Math.round(screenSize / 700) /* Amount of fruit based on screen size */
@@ -171,24 +172,40 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function setFruitPositions(collectedFruit) {
-        // Get the collected fruit's x and y boundary
-        const collectedFruitRect = collectedFruit.getBoundingClientRect();
-        // Max width based on the window width
-        const maxWidth = superfruitGameWidth - (collectedFruitRect.width * 2);
-        // Max width based on the window height
-        const maxHeight = superfruitGameHeight - (collectedFruitRect.height * 2);
+        if (!superFruitMode) {
+            // Get the collected fruit's x and y boundary
+            const collectedFruitRect = collectedFruit.getBoundingClientRect();
+            // Max width based on the window width
+            const maxWidth = superfruitGameWidth - (collectedFruitRect.width * 2);
+            // Max width based on the window height
+            const maxHeight = superfruitGameHeight - (collectedFruitRect.height * 2);
 
-        // Generate random positions within the viewport
-        const randomX = Math.random() * maxWidth;
-        const randomY = Math.random() * maxHeight;
+            placeFruits(maxWidth, maxHeight, collectedFruitRect)
+        }
+        else if (superFruitMode) {
+            // Get the collected fruit's x and y boundary
+            const collectedFruitRect = collectedFruit.getBoundingClientRect();
+            // Max width based on the window width
+            const maxWidth = superfruitGameWidth - ((collectedFruitRect.width / scaleSize) * 2);
+            // Max width based on the window height
+            const maxHeight = superfruitGameHeight - ((collectedFruitRect.height / scaleSize) * 2);
 
-        // Ensure the fruit stays within the viewport
-        const x = Math.max((collectedFruitRect.width * 2), Math.min(randomX, maxWidth));
-        const y = Math.max((collectedFruitRect.height * 2), Math.min(randomY, maxHeight));
+            placeFruits(maxWidth, maxHeight, collectedFruitRect)
+        }
 
-        // Place fruit
-        collectedFruit.style.left = `${x}px`;
-        collectedFruit.style.top = `${y}px`;
+        function placeFruits(maxWidth, maxHeight, collectedFruitRect) {
+            // Generate random positions within the viewport
+            const randomX = Math.random() * maxWidth;
+            const randomY = Math.random() * maxHeight;
+
+            // Ensure the fruit stays within the viewport
+            const x = Math.max((collectedFruitRect.width * 2), Math.min(randomX, maxWidth));
+            const y = Math.max((collectedFruitRect.height * 2), Math.min(randomY, maxHeight));
+
+            // Place fruit
+            collectedFruit.style.left = `${x}px`;
+            collectedFruit.style.top = `${y}px`;
+        }
     }
 
     // Function to check for collisions with fruits
