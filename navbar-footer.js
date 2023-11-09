@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
     let scrolledX = window.scrollX;
     let scrolledY = window.scrollY;
-    console.log(scrolledX + ", " + scrolledY)
     if (scrolledX !== 0) {
         window.scrollTo(0, scrolledY);
     }
