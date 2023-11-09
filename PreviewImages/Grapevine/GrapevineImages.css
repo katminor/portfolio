@@ -1,42 +1,38 @@
-body {
-    margin: 0;
-    overflow: hidden;
-    cursor: pointer;
+.grapevine-row {
     transform: rotate(-22.5deg);
-}
-
-.row {
     display: flex;
     flex-direction: row;
     gap: 32px;
+    margin-top: -320px;
+    margin-left: -140px;
 }
 
-.column {
+.grapevine-column {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
-.screen { 
+.grapevine-screen { 
     background-color:gray;
 	width:230.25px;
 	height:486.5px;
 }
 
-.alignment-margin {
+.grapevine-alignment-margin {
     margin-top: 60px;
 }
 
-.alignment-margin-two {
+.grapevine-alignment-margin-two {
     margin-top: 260px;
 }
 
-#experience {
+#grapevine-experience {
     width: 482.37px;
     height: 285.84px;
 }
 
-#loop {
+#grapevine-loop {
     width: 453.51px;
     height: 246.49px;
     transform: rotate(-9.23deg);
