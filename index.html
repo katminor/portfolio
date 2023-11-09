@@ -22,6 +22,11 @@ you rn
     <title>Kat Minor Portfolio</title>
     <link rel="stylesheet" type="text/css" href="portfolioIndex.css">
     <link rel="stylesheet" type="text/css" href="navbar-footer.css">
+    <link rel="stylesheet" href="PreviewImages/Preview.css">
+    <link rel="stylesheet" href="PreviewImages/Drift/DriftImages.css">
+    <link rel="stylesheet" href="PreviewImages/Grapevine/GrapevineImages.css">
+    <link rel="stylesheet" href="PreviewImages/What's Cooking/What'sCookingImages.css">
+    <link rel="stylesheet" href="PreviewImages/MLB/MLBImages.css">
     <script src="script.js"></script>
     <script src="left-right-animations.js"></script>
     <script src="PreviewImages/HomeSection.js"></script>
@@ -93,7 +98,61 @@ you rn
         </nav>
     </div>
     <div id="game-container">
-        <iframe src="SuperFruitGame/SuperFruitGameFinal.html" id="super-fruit-game"></iframe>
+
+        <div id="game">
+            <!-- Timer Bar -->
+            <div id="timer-bar" class="game-start-dependant"></div>
+
+            <!-- Interaction Area-->
+            <div id="throw-area" class="game-start-dependant"></div>
+            <a onmousedown="event.preventDefault()">
+                <div id="ball"></div>
+            </a>
+
+            <!-- All Fruit -->
+            <div id="fruit-container">
+            </div>
+
+            <!-- Wow for fruit collection -->
+            <div id="wow-text" class="no-drag game-start-dependant"></div>
+
+            <!-- Begginning text  -->
+            <span class="intro-text" id="with-ball"><strong>Drag me to start a game!</strong></span>
+            <div class="intro-text" id="hello">
+                <span><strong>Hi, I'm Kat!</strong> <img class="decorative-text" src="Pictures/Abstract/Flower.svg"
+                        alt="Decorative Flower"></span><br>
+                <span><strong>I’m a Product Designer</strong></span> <img class="decorative-text"
+                    src="Pictures/Abstract/Plus.svg" alt="Plus/And"> <span><strong>UI Artist,</strong></span><br>
+                <span>designing fun for everyone :)</span>
+            </div>
+
+            <div id="score-container">
+                <!-- Fruit Counter -->
+                <text id="fruit-counter" class="no-drag" transform="rotate(0)">0</text>
+
+                <!-- High Score -->
+                <div id="end-game-text">
+                    <div id="high-score">High Score: 0</div>
+                    <div id="play-again">To play again, drag the ball<br>
+                        or check out my portfolio below :)</div>
+                </div>
+            </div>
+
+            <!-- Super Fruit Time! Progress Bar -->
+            <div class="progress-bar-container game-start-dependant">
+                <svg viewBox="0 0 300 300">
+                    <g transform="translate(150,150)">
+                        <circle cx="0" cy="0" r="125" class="progress-bar" id="background-bar"></circle>
+                    </g>
+                    <g transform="translate(150,150)">
+                        <circle cx="0" cy="0" r="125" class="progress-bar" id="collected-fruit-progress"></circle>
+                    </g>
+                    <g transform="translate(150,150)">
+                        <circle cx="0" cy="0" r="125" class="progress-bar" id="super-fruit-timer"></circle>
+                    </g>
+                </svg>
+            </div>
+        </div>
     </div>
     <div id="first-divider" class="work-divider">
         <img class="star" src="Pictures/Abstract/Star.svg">
@@ -101,9 +160,33 @@ you rn
         <hr>
     </div>
     <div id="all-projects">
-        <a href="Project Pages/MLB/mlb.html" class="project-option animate" id="mlb">
-            <iframe class="preview-image" src="PreviewImages/MLB/MLBPreview.html" frameborder="0"
-                scrolling="no"></iframe>
+        <a href="../Project Pages/MLB/mlb.html" class="project-option animate" id="mlb">
+            <div class="preview-image">
+                <div class="preview">
+                    <div class="preview-text">
+                        <img src="Pictures/MLB/Text/TextMLB.png" alt="mlb the show">
+                    </div>
+                    <div class="mlb-row mlb-horizontal-aligned">
+                        <div class="mlb-column mlb-alignment-margin">
+                            <img src="Pictures/MLB/Menu/GameStart/Start – 2.png" class="mlb-screen" alt="Screen Image">
+                            <img src="Pictures/MLB/Banners/Artsy 7.png" class="mlb-banner" alt="Banner Image">
+                            <img src="Pictures/MLB/Menu/Gifs/Games.gif" class="mlb-screen" alt="Screen Image">
+                        </div>
+                        <div class="mlb-column">
+                            <div class="mlb-cards">
+                                <img src="Pictures/MLB/Cards/Finest 8_B.jpg" class="mlb-card" alt="Card Image">
+                                <img src="Pictures/MLB/Cards/Finest 1_A.png" class="mlb-card" alt="Card Image">
+                                <img src="Pictures/MLB/Cards/Draft 1_B.jpg" class="mlb-card" alt="Card Image">
+                                <img src="Pictures/MLB/Cards/Finest 10_A.png" class="mlb-card" alt="Card Image">
+                            </div>
+                            <div class="mlb-icon-row mlb-right-aligned">
+                                <img src="Pictures/MLB/Icons/Mascot Icon Philidelphia.png" class="mlb-icon" alt="Icon Image">
+                                <img src="Pictures/MLB/Icons/Wash Icon Abstract.png" class="mlb-icon" alt="Icon Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="description-container">
                 <div class="project-title-container">
                     <p class="title"><strong>MLB The Show</strong></p>
@@ -120,7 +203,7 @@ you rn
             <hr>
             <img class="star" src="Pictures/Abstract/Star.svg">
         </div>
-        <a href="Project Pages/Whats Cooking/WhatsCooking.html" class="project-option animate right">
+        <a href="../Project Pages/Whats Cooking/WhatsCooking.html" class="project-option animate right">
             <div class="description-container">
                 <div class="project-title-container">
                     <p class="title"><strong>What's Cooking?</strong></p>
@@ -131,16 +214,64 @@ you rn
                         in-game communication between humans and AI look like?</strong></p>
                 <button>let's go</button>
             </div>
-            <iframe class="preview-image" src="PreviewImages/What's Cooking/What'sCookingPreview.html"
-                data-href="Project Pages/Whats Cooking/WhatsCooking.html" frameborder="0" scrolling="no"></iframe>
+            <div class="preview-image">
+                <div class="preview">
+                    <div class="preview-text">
+                        <img src="Pictures/What's Cooking/Text/TextWhat'sCooking.png" alt="What's Cooking?">
+                    </div>
+                    <div class="whats-cooking-row whats-cooking-horizontal-aligned">
+                        <div class="whats-cooking-column">
+                            <img src="Pictures/What's Cooking/Screens/Main Menu/Join Kitchen-1.png"
+                                class="whats-cooking-screen" alt="Screen Image">
+                            <img src="Pictures/What's Cooking/Screens/Gifs/Player Join.gif"
+                                class="whats-cooking-screen" alt="Screen Image">
+                            <div class="whats-cooking-icon-row whats-cooking-right-aligned">
+                                <img src="Pictures/What's Cooking/Characters/Bubbles/Oakley Bubble Happy.png"
+                                    class="whats-cooking-icon" alt="Icon Image">
+                                <img src="Pictures/What's Cooking/Characters/Bubbles/Hopkins Bubble Happy.png"
+                                    class="whats-cooking-icon" alt="Icon Image">
+                            </div>
+                        </div>
+                        <div class="whats-cooking-column whats-cooking-alignment-margin">
+                            <img src="Pictures/What's Cooking/Screens/Instructions/Chef Doodle Explain Menu-1.png"
+                                class="whats-cooking-screen" alt="Screen Image">
+                            <img src="Pictures/What's Cooking/Screens/Instructions/Chef Doodle Multiple Kitchens Agree.png"
+                                class="whats-cooking-screen" alt="Screen Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </a>
         <div class="work-divider">
             <hr>
             <img class="star" src="Pictures/Abstract/Star.svg">
         </div>
-        <a href="Project Pages/Grapevine/grapevine.html" class="project-option animate">
-            <iframe class="preview-image" src="PreviewImages/Grapevine/GrapevinePreview.html"
-                data-href="Project Pages/Grapevine/grapevine.html" frameborder="0" scrolling="no"></iframe>
+        <a href="../Project Pages/Grapevine/grapevine.html" class="project-option animate">
+            <div class="preview-image">
+                <div class="preview">
+                    <div class="preview-text">
+                        <img src="Pictures/Grapevine/Text/TextGrapevine.png">
+                    </div>
+                    <div class="grapevine-row">
+                        <div class="grapevine-column">
+                            <img src="Pictures/Grapevine/Decorative/Twist.png" id="grapevine-loop"
+                                class="grapevine-decoration" alt="Loop Decoration">
+                            <img src="Pictures/Grapevine/Experience/Meeting.png" id="grapevine-experience"
+                                class="grapevine-decoration" alt="Meeting between two grapes">
+                        </div>
+                        <div class="grapevine-alignment-margin-two">
+                            <img src="Pictures/Grapevine/Screens/Gifs/Intro.gif" class="grapevine-screen"
+                                alt="Intro screen">
+                        </div>
+                        <div class="grapevine-column grapevine-alignment-margin">
+                            <img src="Pictures/Grapevine/Screens/Matching/Swipe Vinny 1.png" class="grapevine-screen"
+                                alt="Swipe Screen">
+                            <img src="Pictures/Grapevine/Screens/Gifs/Love Letters.gif" class="grapevine-screen"
+                                alt="Love Letters screen">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="description-container">
                 <div class="project-title-container">
                     <p class="title"><strong>Grapevine</strong></p>
@@ -156,7 +287,7 @@ you rn
             <hr>
             <img class="star" src="Pictures/Abstract/Star.svg">
         </div>
-        <a href="Project Pages/Drift/drift.html" class="project-option animate right">
+        <a href="../Project Pages/Drift/drift.html" class="project-option animate right">
             <div class="description-container">
                 <div class="project-title-container">
                     <p class="title"><strong>Drift Mobile</strong></p>
@@ -167,8 +298,33 @@ you rn
                         can we make selling via mobile easier?</strong></p>
                 <button>let's go</button>
             </div>
-            <iframe class="preview-image" src="PreviewImages/Drift/DriftPreview.html"
-                data-href="Project Pages/Drift/drift.html" frameborder="0" scrolling="no"></iframe>
+            <div class="preview-image">
+                <div class="preview">
+                    <div class="preview-text">
+                        <img src="Pictures/Drift/Text/TextDrift.png" alt="Drift Mobile">
+                    </div>
+                    <div id="Drift">
+                        <div class="drift-row">
+                            <div class="drift-column">
+                                <img src="Pictures/Drift/Screens/Feed Cards/Feed Card.png"
+                                    class="drift-feed-card top" alt="Feed card">
+                                <img src="Pictures/Drift/Screens/Feed Cards/New Account Card.png"
+                                    class="drift-feed-card bottom" alt="Feed card expanded">
+                            </div>
+                            <div class="drift-alignment-margin">
+                                <img src="Pictures/Drift/Screens/Gifs/Account.gif" class="drift-screen"
+                                    alt="Drift mobile account gif">
+                            </div>
+                            <div class="drift-column alignment-margin">
+                                <img src="Pictures/Drift/Screens/Mobile Messaging/Mark CQL.png" class="drift-screen"
+                                    alt="Sending photos through drift mobile">
+                                <img src="Pictures/Drift/Screens/Mobile Messaging/Send Photo 2.png"
+                                    class="drift-screen" alt="Drift mobile send video">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </a>
     </div>
     <hr class="final-divider">
