@@ -393,7 +393,7 @@ h2 a {
     gap: 8px;
 }
 
-.card-container img {
+.card-container img, .card-container video {
     width: 100%;
     height: auto;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, .66);
