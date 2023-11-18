@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const projectOptions = document.querySelectorAll('.project-option');
-    const iframes = document.querySelectorAll('.preview-image');
+    const ipreviewImages = document.querySelectorAll('.preview-image');
     const descriptions = document.querySelectorAll('.description-container');
     const projectTitleContainers = document.querySelectorAll('.project-title-container');
     const projectTitles = document.querySelectorAll('.title');
@@ -54,13 +54,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function checkMargin() {
-        if (window.innerWidth >= 1400) {
+        if (document.documentElement.clientWidth >= 1400) {
             margin = 0;
             projectOptions.forEach(projectOption => {
                 projectOption.style.flexDirection = 'row';
             });
-            iframes.forEach(iframe => {
-                iframe.style.transform = `scale(.8)`
+            ipreviewImages.forEach(ipreviewImage => {
+                ipreviewImage.style.transform = `scale(.8)`
             });
             descriptions.forEach(description => {
                 description.style.marginTop = '0px';
@@ -80,13 +80,13 @@ document.addEventListener('DOMContentLoaded', function () {
             projectTitleContainers.forEach(projectTitleContainer => {
                 projectTitleContainer.style.fontSize = '16px';
             });
-        } else if (window.innerWidth >= 1350) {
+        } else if (document.documentElement.clientWidth >= 1350) {
             margin = 0;
             projectOptions.forEach(projectOption => {
                 projectOption.style.flexDirection = 'row';
             });
-            iframes.forEach(iframe => {
-                iframe.style.transform = `scale(.8)`
+            ipreviewImages.forEach(ipreviewImage => {
+                ipreviewImage.style.transform = `scale(.8)`
             });
             descriptions.forEach(description => {
                 description.style.marginTop = '0px';
@@ -106,13 +106,13 @@ document.addEventListener('DOMContentLoaded', function () {
             projectTitleContainers.forEach(projectTitleContainer => {
                 projectTitleContainer.style.fontSize = '16px';
             });
-        } else if (window.innerWidth >= 1000) {
+        } else if (document.documentElement.clientWidth >= 1000) {
             margin = 0;
             projectOptions.forEach(projectOption => {
                 projectOption.style.flexDirection = 'row';
             });
-            iframes.forEach(iframe => {
-                iframe.style.transform = `scale(.6)`;
+            ipreviewImages.forEach(ipreviewImage => {
+                ipreviewImage.style.transform = `scale(.6)`;
             });
             descriptions.forEach(description => {
                 description.style.marginTop = '0px';
@@ -132,13 +132,13 @@ document.addEventListener('DOMContentLoaded', function () {
             projectTitleContainers.forEach(projectTitleContainer => {
                 projectTitleContainer.style.fontSize = '14px';
             });
-        } else if (window.innerWidth >= 725) {
+        } else if (document.documentElement.clientWidth >= 725) {
             margin = 0;
             projectOptions.forEach(projectOption => {
                 projectOption.style.flexDirection = 'row';
             });
-            iframes.forEach(iframe => {
-                iframe.style.transform = `scale(.4)`;
+            ipreviewImages.forEach(ipreviewImage => {
+                ipreviewImage.style.transform = `scale(.4)`;
             });
             descriptions.forEach(description => {
                 description.style.marginTop = '0px';
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
             projectTitleContainers.forEach(projectTitleContainer => {
                 projectTitleContainer.style.fontSize = '12px';
             });
-        } else if (window.innerWidth >= 500) {
+        } else if (document.documentElement.clientWidth >= 500) {
             margin = 72;
             // No transform
             projectOptions.forEach(projectOption => {
@@ -169,8 +169,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     projectOption.style.flexDirection = 'column'
                 };
             });
-            iframes.forEach(iframe => {
-                iframe.style.transform = 'none';
+            ipreviewImages.forEach(ipreviewImage => {
+                ipreviewImage.style.transform = 'none';
             });
             descriptions.forEach(description => {
                 description.style.marginLeft = '18px';
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
             projectTitleContainers.forEach(projectTitleContainer => {
                 projectTitleContainer.style.fontSize = '12px';
             });
-        } else if (window.innerWidth <= 500) {
+        } else if (document.documentElement.clientWidth <= 500) {
             margin = 36;
             // No transform
             projectOptions.forEach(projectOption => {
@@ -195,8 +195,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     projectOption.style.flexDirection = 'column'
                 };
             });
-            iframes.forEach(iframe => {
-                iframe.style.transform = 'none';
+            ipreviewImages.forEach(ipreviewImage => {
+                ipreviewImage.style.transform = 'none';
             });
             descriptions.forEach(description => {
                 description.style.marginLeft = '18px';
@@ -215,12 +215,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    function resizeIframes() {
-        iframes.forEach((iframe, index) => {
-            const availableWidth = window.innerWidth - margin;
-            const availableHeight = window.innerHeight - margin;
+    function resizeIpreviewImages() {
+        ipreviewImages.forEach((ipreviewImage, index) => {
+            let availableWidth = document.documentElement.clientWidth - margin;
+            let availableHeight = window.innerHeight - margin;
 
-            if (window.innerWidth <= 725) {
+            if (document.documentElement.clientWidth <= 725) {
                 const scaleFactorWidth = availableWidth / originalWidth;
                 const scaleFactorHeight = availableHeight / originalHeight;
                 const scaleFactor = Math.min(scaleFactorWidth, scaleFactorHeight);
@@ -228,18 +228,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 let newHeight = originalHeight - (originalHeight * scaleFactor);
                 let newWidth = originalWidth - (originalWidth * scaleFactor);
 
-                iframe.style.transform = `scale(${scaleFactor})`;
-                iframe.style.marginTop = `-${newHeight / 2}px`;
-                iframe.style.marginBottom = `-${newHeight / 2}px`;
-                iframe.style.marginLeft = `-${newWidth / 2}px`;
-                iframe.style.marginRight = `-${newWidth / 2}px`;
+                ipreviewImage.style.transform = `scale(${scaleFactor})`;
+                ipreviewImage.style.marginTop = `-${newHeight / 2}px`;
+                ipreviewImage.style.marginBottom = `-${newHeight / 2}px`;
+                ipreviewImage.style.marginLeft = `-${newWidth / 2}px`;
+                ipreviewImage.style.marginRight = `-${newWidth / 2}px`;
 
                 descriptions[index].style.width = `${originalWidth * scaleFactor}px`;
                 descriptions[index].style.marginLeft = 0;
                 descriptions[index].style.marginRight = 0;
                 descriptions[index].style.marginTop = `18px`;
             } else {
-                const computedStyle = window.getComputedStyle(iframe);
+                const computedStyle = window.getComputedStyle(ipreviewImage);
                 const transformValue = computedStyle.getPropertyValue('transform');
                 const matrix = transformValue.match(/^matrix\((.+)\)$/);
                 let scaleFactor;
@@ -254,10 +254,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 let newHeight = originalHeight - (originalHeight * scaleFactor);
                 let newWidth = originalWidth - (originalWidth * scaleFactor);
 
-                iframe.style.marginTop = `-${newHeight / 2}px`;
-                iframe.style.marginBottom = `-${newHeight / 2}px`;
-                iframe.style.marginLeft = `-${(newWidth / 2) - margin}px`;
-                iframe.style.marginRight = `-${newWidth / 2}px`;
+                ipreviewImage.style.marginTop = `-${newHeight / 2}px`;
+                ipreviewImage.style.marginBottom = `-${newHeight / 2}px`;
+                ipreviewImage.style.marginLeft = `-${(newWidth / 2) - margin}px`;
+                ipreviewImage.style.marginRight = `-${newWidth / 2}px`;
             }
         });
     }
@@ -265,13 +265,13 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', function () {
         checkMargin();
         checkProjectTitle();
-        resizeIframes();
+        resizeIpreviewImages();
     });
 
     checkMargin();
     window.onload = function () {
         checkProjectTitle();
     }
-    resizeIframes();
+    resizeIpreviewImages();
 
 });
