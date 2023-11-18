@@ -662,7 +662,7 @@ document.addEventListener('DOMContentLoaded', function () {
             textAboveBall.style.left = `${position.x + (ballSize / 2)}px`;
 
             if (firstGame) {
-                position.x = (superfruitGameWidth / 2)
+                position.x = ((document.documentElement.clientWidth / 2) - (ballSize / 2))
             }
             if (bounceTicks == 0) { // Make the ball bounce to remind people you should drag it. There is probably a more efficient way to do this without bounce ticks.
                 const min = superfruitGameHeight / 40;
