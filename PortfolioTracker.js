@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         else if ((ver === 'ver2') || (cachedVersion === 'ver2')) {
-            document.getElementById('all-projects').style.flexDirection = "column-reverse";
+            document.getElementById('all-projects').style.flexDirection = "column";
             if (cachedVersion !== 'ver2') {
                 localStorage.setItem('version', ver);
             }
