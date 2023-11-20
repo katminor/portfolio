@@ -4,42 +4,48 @@
 // Ver2 is for UI Artist/Games
 
 // Remove version. For testing.
-function resetCache() {
-    localStorage.setItem('version', 'none');
+function clearCache() {
+    localStorage.setItem('version', '');
     console.log("Cache reset.")
+}
+
+// Remove version. For testing. There are two of them because no matter what I always get the wrong one.
+function resetCache() {
+    clearCache();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     var currentURL = window.location.href;
-    var verNumber = currentURL.substring(currentURL.length - 4, currentURL.length);
+    let cachedVersion = getVersion();
 
     function getVersion() {
-        var cachedVersion = localStorage.getItem('version');
-        return cachedVersion
+        let cachedVersion = localStorage.getItem('version');
+        if ((!cachedVersion) || (cachedVersion === '')) {
+            let verNumber = currentURL.substring(currentURL.length - 4, currentURL.length);
+            if ((verNumber === 'html') || (verNumber === 'none')) {
+                localStorage.setItem('version', 'none');
+            }
+            else {
+                localStorage.setItem('version', verNumber);
+            }
+        }
+        cachedVersion = localStorage.getItem('version');
+        return cachedVersion;
     }
 
     function changeLayout(ver) {
-        var cachedVersion = getVersion()
-        if ((ver === 'ver1') || (cachedVersion === 'ver1')) {
+        if (cachedVersion === 'ver1') {
             document.getElementById('all-projects').style.flexDirection = "column-reverse";
-            if (cachedVersion !== 'ver1') {
-                localStorage.setItem('version', ver);
-            }
         }
-        else if ((ver === 'ver2') || (cachedVersion === 'ver2')) {
+        else if (cachedVersion === 'ver2') {
             document.getElementById('all-projects').style.flexDirection = "column";
-            if (cachedVersion !== 'ver2') {
-                localStorage.setItem('version', ver);
-            }
         }
         else {
             document.getElementById('all-projects').style.flexDirection = "column";
-            localStorage.setItem('version', 'none');
         }
     }
 
     function changeOpener(ver) {
-        var cachedVersion = getVersion()
         let introJobProduct = document.getElementById('intro-job-product');
         let introJobGame = document.getElementById('intro-job-game');
         let introTagline = document.getElementById('intro-tagline');
@@ -61,8 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Call changeLayout with the version number
-    changeLayout(verNumber);
+    let currentVer = cachedVersion;
+    changeLayout(currentVer);
     if (document.getElementById('intro-job-product')) {
-        changeOpener(verNumber);
+        changeOpener(currentVer);
     }
 });
