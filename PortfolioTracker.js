@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
         let cachedVersion = localStorage.getItem('version');
         if ((!cachedVersion) || (cachedVersion === '')) {
             let verNumber = currentURL.substring(currentURL.length - 4, currentURL.length);
-            if ((verNumber === 'html') || (verNumber === 'none')) {
-                localStorage.setItem('version', 'none');
+            if ((verNumber === 'ver1') || (verNumber === 'ver2')) {
+                localStorage.setItem('version', verNumber);
             }
             else {
-                localStorage.setItem('version', verNumber);
+                localStorage.setItem('version', '');
             }
         }
         cachedVersion = localStorage.getItem('version');
