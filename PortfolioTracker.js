@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if ((ver === 'ver1') || (cachedVersion === 'ver1')) {
             introJobProduct.innerHTML = "<strong>I'm a Product Designer</strong>";
             introJobGame.innerHTML = "";
-            introTagline.innerHTML = "passionate about creating fun and <br>easy to use products for everyone";
             plus.style.display = "none";
         }
         else if ((ver === 'ver2') || (cachedVersion === 'ver2')) {
