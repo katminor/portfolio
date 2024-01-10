@@ -53,11 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if ((ver === 'ver1') || (cachedVersion === 'ver1')) {
             introJobProduct.innerHTML = "<strong>I'm a Product Designer</strong>";
             introJobGame.innerHTML = "";
+            introTagline.innerHTML = "a passionate data-focused problem-solver.";
             plus.style.display = "none";
         }
         else if ((ver === 'ver2') || (cachedVersion === 'ver2')) {
             introJobProduct.innerHTML = "<strong>I'm a UI Artist</strong>";
             introJobGame.innerHTML = "";
+            introTagline.innerHTML = "passionate about sparking joy.";
             plus.style.display = "none";
         }
         else {
