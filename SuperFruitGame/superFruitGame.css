@@ -57,10 +57,16 @@
     z-index: 1;
 }
 
+#intro-tagline {
+    font-size: 36px;
+}
+
 /* Instructional text at the start of the game */
 /* Instructional text at the start of the game */
 #hello {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     /* Centered in the middle of the screen for resizing purposes */
     top: 40%;
@@ -71,8 +77,8 @@
     font-size: 48px;
     z-index: 2;
     transition: opacity .25s ease-in-out, font-size .25s ease-in-out, left .5s ease-in-out;
-    white-space: nowrap;
-    line-height: 64px;
+    gap: 16px;
+    width: 80%;
 }
 
 /* Appears with the ball to give user instructions */
@@ -120,7 +126,12 @@
 @media (max-width: 1000px) {
     #hello {
         font-size: 32px;
-        line-height: 48px;
+        gap: 0px;
+    }
+
+    #intro-tagline {
+        font-size: 24px;
+        height: 12px;
     }
 
     #with-ball {
@@ -161,6 +172,10 @@
         line-height: 32px;
     }
 
+    #intro-tagline {
+        font-size: 18px;
+    }
+
     #with-ball {
         font-size: 16px;
         line-height: 32px;
@@ -187,6 +202,11 @@
     #hello {
         font-size: 16px;
         line-height: 24px;
+    }
+
+    #intro-tagline {
+        font-size: 14px;
+        height: 12px;
     }
 
     #with-ball {
@@ -225,6 +245,11 @@
         line-height: 16px;
     }
 
+    #intro-tagline {
+        font-size: 8px;
+        height: 12px;
+    }
+
     #high-score {
         font-size: 12px;
         line-height: 16px;
@@ -254,6 +279,11 @@
     #hello {
         font-size: 6px;
         line-height: 12px;
+    }
+
+    #intro-tagline {
+        font-size: 6px;
+        height: 8px;
     }
 
     #with-ball {

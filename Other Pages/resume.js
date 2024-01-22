@@ -44,15 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleResize() {
         let totalPadding = calculateTotalPadding();
         let footerHeight = footer.offsetHeight;
-        firstResumeElement.style.paddingTop = totalPadding + 'px';
         adjustYears();
     }
-
-    window.addEventListener('scroll', adjustYears);
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', adjustYears);
 
     // Initial adjustment
     handleResize();
+
 
     // Job Selectors
     const jobContainers = document.querySelectorAll('.job-container');

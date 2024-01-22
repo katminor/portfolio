@@ -8,7 +8,7 @@ p.gray.category {
     font-size: 12px;
 }
 
-.year-section h2 {
+.year-section h2, #resume-download a, .resume-heading h2 {
     font-size: 24px;
 }
 
@@ -22,17 +22,34 @@ p a {
     max-width: 600px;
 }
 
+#resume {
+    padding-top: 52px;
+}
+
+#resume-download {
+    display: flex;
+    margin-top: 24px;
+}
+
+#resume-download a {
+    text-decoration: none;
+}
+
 @media (max-width: 1000px){
     .year-section h1 {
         font-size: 36px;
     }
     
-    .year-section h2 {
+    .year-section h2, #resume-download a, .resume-heading h2 {
         font-size: 22px;
     }
     
     .year-section p {
         font-size: 18px;
+    }
+
+    #resume {
+        padding-top: 100px;
     }
 }
 
@@ -41,12 +58,16 @@ p a {
         font-size: 32px;
     }
     
-    .year-section h2 {
+    .year-section h2, #resume-download a, .resume-heading h2 {
         font-size: 20px;
     }
     
     .year-section p {
         font-size: 16px;
+    }
+
+    #resume {
+        padding-top: 100px;
     }
 }
 
@@ -55,12 +76,16 @@ p a {
         font-size: 26px;
     }
     
-    .year-section h2 {
+    .year-section h2, #resume-download a, .resume-heading h2 {
         font-size: 18px;
     }
     
     .year-section p {
         font-size: 16px;
+    }
+
+    #resume {
+        padding-top: 100px;
     }
 }
 
@@ -69,13 +94,17 @@ p a {
         font-size: 20px;
     }
     
-    .year-section h2 {
+    .year-section h2, #resume-download a, .resume-heading h2 {
         font-size: 16px;
     }
     
     .year-section p {
         font-size: 12px;
         line-height: 16px;
+    }
+
+    #resume {
+        padding-top: 80px;
     }
 }
 
